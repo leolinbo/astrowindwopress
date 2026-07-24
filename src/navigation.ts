@@ -95,7 +95,8 @@ export const footerData = {
       title: 'Support',
       links: [
         { text: 'Contact Us', href: getPermalink('/contact') },
-        { text: 'FAQ', href: getPermalink('/faq') },
+        { text: 'Services', href: getPermalink('/services') },
+        { text: 'Get a Quote', href: getPermalink('/pricing') },
         { text: 'Privacy Policy', href: getPermalink('/privacy') },
         { text: 'Terms', href: getPermalink('/terms') },
       ],
