@@ -1,0 +1,32 @@
+---
+export interface Props {
+  images: { src: string; alt: string; title?: string }[];
+}
+
+const { images } = Astro.props;
+---
+
+<div class="w-full overflow-x-auto pb-4" style="-webkit-overflow-scrolling: touch;">
+  <div class="flex gap-4" style="min-width: max-content;">
+    {
+      images.map((img) => (
+        <div class="flex-shrink-0 w-48 md:w-56">
+          <div class="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+            <img
+              src={img.src}
+              alt={img.alt}
+              class="w-full h-36 md:h-44 object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+            {img.title && (
+              <div class="px-2 py-1.5 text-xs text-center text-muted dark:text-slate-400 truncate">
+                {img.title}
+              </div>
+            )}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

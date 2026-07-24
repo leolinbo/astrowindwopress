@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Content from '~/components/widgets/Content.astro';
+import ProductGallery from '~/components/ProductGallery.astro';
 
 const metadata = {
   title: 'Commercial LED Lighting Manufacturer | ENCORE',
@@ -46,4 +47,20 @@ const metadata = {
       Cylinder, linear, motorized, and wall-mounted solutions for every project.
     </Fragment>
   </Content>
+
+  <!-- Product Gallery -->
+  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-7xl">
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-center mb-2 dark:text-white">Product Gallery</h2>
+    <p class="text-center text-muted dark:text-slate-400 mb-8">Scroll to explore our commercial lighting collection</p>
+    <ProductGallery
+      images={[
+        { src: '/images/products/prod-movia-web-01.jpg', alt: 'MOVIA Motorized Track Light', title: 'MOVIA Motorized Track Light' },
+        { src: '/images/products/prod-movia-web-02.jpg', alt: 'MOVIA Motorized Track Light 2', title: 'MOVIA — Angle View' },
+        { src: '/images/products/prod-ovega-web-01.jpg', alt: 'OVEGA Track Light', title: 'OVEGA Track Light' },
+        { src: '/images/products/prod-ovega-web-03.jpg', alt: 'OVEGA Track Light Detail', title: 'OVEGA — Detail' },
+        { src: '/images/products/prod-ella-web-01.jpg', alt: 'ELLA Downlight', title: 'ELLA Downlight' },
+        { src: '/images/products/prod-ella-web-05.jpg', alt: 'ELLA Downlight Installation', title: 'ELLA — Installation' },
+      ]}
+    />
+  </section>
 </Layout>
