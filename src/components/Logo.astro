@@ -1,9 +1,19 @@
 ---
-import { SITE } from 'astrowind:config';
+import logoDark from '~/assets/images/logo.png';
+import logoLight from '~/assets/images/logo-white.png';
 ---
 
-<span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
->
-  🚀 {SITE?.name}
-</span>
+<a href="/" class="flex items-center gap-2 no-underline">
+  <picture>
+    <source srcset={logoLight.src} media="(prefers-color-scheme: dark)" />
+    <img
+      src={logoDark.src}
+      alt="ENCORE"
+      class="h-8 md:h-9 w-auto"
+      width={logoDark.width}
+      height={logoDark.height}
+      loading="eager"
+      decoding="async"
+    />
+  </picture>
+</a>
