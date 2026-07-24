@@ -1,117 +1,212 @@
 import type { PaginateFunction } from 'astro';
-import { getCollection, render } from 'astro:content';
-import type { CollectionEntry } from 'astro:content';
-import type { Post, Taxonomy } from '~/types';
+import type { Post, Taxonomy, MetaData } from '~/types';
 import { APP_BLOG } from 'astrowind:config';
 import { cleanSlug, trimSlash, BLOG_BASE, POST_PERMALINK_PATTERN, CATEGORY_BASE, TAG_BASE } from './permalinks';
 
-const generatePermalink = async ({
-  id,
-  slug,
-  publishDate,
-  category,
-}: {
-  id: string;
+// ---------------------------------------------------------------------------
+// WordPress REST API types
+// ---------------------------------------------------------------------------
+
+interface WpTitle {
+  rendered: string;
+}
+
+interface WpContent {
+  rendered: string;
+}
+
+interface WpRendered {
+  rendered: string;
+}
+
+interface WpMediaSize {
+  source_url: string;
+  width: number;
+  height: number;
+}
+
+interface WpMediaDetails {
+  sizes: Record<string, WpMediaSize>;
+}
+
+interface WpFeaturedMedia {
+  source_url: string;
+  media_details: WpMediaDetails;
+  alt_text: string;
+}
+
+interface WpTerm {
+  taxonomy: 'category' | 'post_tag';
   slug: string;
-  publishDate: Date;
-  category: string | undefined;
-}) => {
-  const year = String(publishDate.getFullYear()).padStart(4, '0');
-  const month = String(publishDate.getMonth() + 1).padStart(2, '0');
-  const day = String(publishDate.getDate()).padStart(2, '0');
-  const hour = String(publishDate.getHours()).padStart(2, '0');
-  const minute = String(publishDate.getMinutes()).padStart(2, '0');
-  const second = String(publishDate.getSeconds()).padStart(2, '0');
+  name: string;
+}
 
+interface WpAuthor {
+  name: string;
+}
+
+interface WpEmbedded {
+  'wp:term'?: WpTerm[][];
+  'wp:featuredmedia'?: WpFeaturedMedia[];
+  author?: WpAuthor[];
+}
+
+interface WpPost {
+  id: number;
+  slug: string;
+  date: string;
+  modified: string;
+  title: WpTitle;
+  content: WpContent;
+  excerpt: WpRendered;
+  _embedded?: WpEmbedded;
+}
+
+// ---------------------------------------------------------------------------
+// WordPress REST API — replace with your own WordPress site URL
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// WordPress REST API — configure via environment variable or change here
+// ---------------------------------------------------------------------------
+// Set the WP_API_URL env var to your WordPress site's REST API root, e.g.:
+//   WP_API_URL=https://example.com/wp-json/wp/v2 npm run dev
+// If unset, the default URL below is used as a working demo.
+// ---------------------------------------------------------------------------
+const WP_API_BASE: string =
+  import.meta.env.WP_API_URL ?? 'https://whitesmoke-jellyfish-711069.hostingersite.com/wp-json/wp/v2';
+
+/**
+ * Fetch all posts from WordPress, including embedded resources (categories,
+ * tags, featured media, author) so we can build full Post objects.
+ */
+async function fetchWpPosts(): Promise<WpPost[]> {
+  const url = `${WP_API_BASE}/posts?_embed&per_page=100`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`WordPress API error: ${res.status} ${res.statusText}`);
+  return res.json();
+}
+
+/**
+ * Estimate reading time from plain text (rough: 200 words/min).
+ */
+function estimateReadingTime(html: string): number {
+  const text = html.replace(/<[^>]*>/g, '').trim();
+  const words = text.split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.ceil(words / 200));
+}
+
+/**
+ * Strip HTML tags from a string, returning clean text.
+ */
+function stripHtml(html: string): string {
+  return html.replace(/<[^>]*>/g, '').trim();
+}
+
+/**
+ * Normalise a raw WordPress REST API post into our internal Post shape.
+ */
+function normalizeWpPost(raw: WpPost): Post {
+  const embed = raw._embedded;
+
+  // ---- category -----------------------------------------------------------
+  const terms = (embed?.['wp:term'] ?? []).flat();
+  const catTerm = terms.find((t) => t.taxonomy === 'category');
+  const category: Taxonomy | undefined = catTerm
+    ? { slug: cleanSlug(catTerm.slug), title: catTerm.name }
+    : undefined;
+
+  // ---- tags ---------------------------------------------------------------
+  const tagTerms = terms.filter((t) => t.taxonomy === 'post_tag');
+  const tags: Taxonomy[] = tagTerms.map((t) => ({
+    slug: cleanSlug(t.slug),
+    title: t.name,
+  }));
+
+  // ---- featured image -----------------------------------------------------
+  const media = (embed?.['wp:featuredmedia'] ?? [])[0];
+  let image: string | undefined;
+  if (media) {
+    const sizes = media.media_details?.sizes ?? {};
+    // Pick medium_large first, then medium, then full, then source_url
+    image =
+      sizes.medium_large?.source_url ??
+      sizes.medium?.source_url ??
+      sizes.full?.source_url ??
+      media.source_url ??
+      undefined;
+  }
+
+  // ---- author -------------------------------------------------------------
+  const authorData = (embed?.['author'] ?? [])[0];
+  const author = authorData?.name ?? undefined;
+
+  const slug = cleanSlug(raw.slug);
+  const publishDate = new Date(raw.date);
+  const updateDate = raw.modified ? new Date(raw.modified) : undefined;
+
+  // Build permalink from the same pattern used by local posts
   const permalink = POST_PERMALINK_PATTERN.replace('%slug%', slug)
-    .replace('%id%', id)
-    .replace('%category%', category || '')
-    .replace('%year%', year)
-    .replace('%month%', month)
-    .replace('%day%', day)
-    .replace('%hour%', hour)
-    .replace('%minute%', minute)
-    .replace('%second%', second);
+    .replace('%id%', String(raw.id))
+    .replace('%category%', category?.slug ?? '')
+    .replace('%year%', String(publishDate.getFullYear()).padStart(4, '0'))
+    .replace('%month%', String(publishDate.getMonth() + 1).padStart(2, '0'))
+    .replace('%day%', String(publishDate.getDate()).padStart(2, '0'))
+    .replace('%hour%', String(publishDate.getHours()).padStart(2, '0'))
+    .replace('%minute%', String(publishDate.getMinutes()).padStart(2, '0'))
+    .replace('%second%', String(publishDate.getSeconds()).padStart(2, '0'));
 
-  return permalink
+  const cleanPermalink = permalink
     .split('/')
     .map((el) => trimSlash(el))
     .filter((el) => !!el)
     .join('/');
-};
-
-const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> => {
-  const { id, data } = post;
-  const { Content, remarkPluginFrontmatter } = await render(post);
-
-  const {
-    publishDate: rawPublishDate = new Date(),
-    updateDate: rawUpdateDate,
-    title,
-    excerpt,
-    image,
-    tags: rawTags = [],
-    category: rawCategory,
-    author,
-    draft = false,
-    metadata = {},
-  } = data;
-
-  const slug = cleanSlug(id); // cleanSlug(rawSlug.split('/').pop());
-  const publishDate = new Date(rawPublishDate);
-  const updateDate = rawUpdateDate ? new Date(rawUpdateDate) : undefined;
-
-  const category = rawCategory
-    ? {
-        slug: cleanSlug(rawCategory),
-        title: rawCategory,
-      }
-    : undefined;
-
-  const tags = rawTags.map((tag: string) => ({
-    slug: cleanSlug(tag),
-    title: tag,
-  }));
 
   return {
-    id: id,
-    slug: slug,
-    permalink: await generatePermalink({ id, slug, publishDate, category: category?.slug }),
+    id: String(raw.id),
+    slug,
+    permalink: cleanPermalink,
 
-    publishDate: publishDate,
-    updateDate: updateDate,
+    publishDate,
+    updateDate,
 
-    title: title,
-    excerpt: excerpt,
-    image: image,
+    title: stripHtml(raw.title?.rendered ?? ''),
+    excerpt: stripHtml(raw.excerpt?.rendered ?? ''),
+    image,
 
-    category: category,
-    tags: tags,
-    author: author,
+    category,
+    tags,
+    author,
 
-    draft: draft,
+    draft: false,
 
-    metadata,
+    metadata: {
+      title: stripHtml(raw.title?.rendered ?? ''),
+      description: stripHtml(raw.excerpt?.rendered ?? ''),
+    } as MetaData,
 
-    Content: Content,
-    // or 'content' in case you consume from API
+    Content: raw.content?.rendered ?? '',
 
-    readingTime: remarkPluginFrontmatter?.readingTime,
+    readingTime: estimateReadingTime(raw.content?.rendered ?? ''),
   };
-};
+}
 
-const load = async function (): Promise<Array<Post>> {
-  const posts = await getCollection('post');
-  const normalizedPosts = posts.map(async (post) => await getNormalizedPost(post));
+// ---------------------------------------------------------------------------
+// Caching layer (kept identical to the original pattern)
+// ---------------------------------------------------------------------------
+let _posts: Array<Post>;
 
-  const results = (await Promise.all(normalizedPosts))
+const load = async (): Promise<Array<Post>> => {
+  const rawPosts = await fetchWpPosts();
+  const normalized = rawPosts
+    .map(normalizeWpPost)
     .sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf())
     .filter((post) => !post.draft);
-
-  return results;
+  return normalized;
 };
 
-let _posts: Array<Post>;
+// ---------------------------------------------------------------------------
+// Exports — same API as the original so all pages continue working
+// ---------------------------------------------------------------------------
 
 /** */
 export const isBlogEnabled = APP_BLOG.isEnabled;
@@ -133,7 +228,6 @@ export const fetchPosts = async (): Promise<Array<Post>> => {
   if (!_posts) {
     _posts = await load();
   }
-
   return _posts;
 };
 

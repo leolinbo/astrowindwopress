@@ -25,8 +25,8 @@ export interface Post {
 
   draft?: boolean;
 
-  /** Rendered Astro component factory for the post body. */
-  Content?: AstroComponentFactory;
+  /** Rendered post body — Astro component factory for local content, or HTML string from CMS. */
+  Content?: AstroComponentFactory | string;
 
   /** Estimated reading time in minutes. */
   readingTime?: number;
