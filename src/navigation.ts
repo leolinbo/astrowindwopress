@@ -106,13 +106,16 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/37545158/' },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/EncoreCommericalLighting' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/encoreledcommerciallighting/' },
+    { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@encorecommerciallighting4413' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `
-    &copy; 2026 ENCORE — Professional Track Lighting & LED Downlight Manufacturer. All rights reserved.
+    <strong>HK HQ:</strong> Room 1, 16/F, Empress Plaza 17-19 Chatham Road South Tsim Sha Tsui, KL.<br>
+    <strong>Factory:</strong> 2/F, Bldg 8th, Zhengzhong Industrial Park, Qiaotou Community, Fuyong, Bao'an Dist, Shenzhen.<br>
+    <strong>Tel:</strong> +852 6768 2519 &nbsp;|&nbsp; <strong>Email:</strong> <a href="mailto:sales@encore-tech.com">sales@encore-tech.com</a><br>
+    &copy; 2026 Encore International Co., Ltd. All rights reserved.
   `,
 };
