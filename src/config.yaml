@@ -1,6 +1,6 @@
 site:
   name: ENCORE
-  site: 'https://www.encore-tech.com'
+  site: 'https://astrowindwopress.vercel.app'
   base: '/'
   trailingSlash: false
 
@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: ENCORE - Professional Track Lighting & LED Downlight Manufacturer
+    default: ENCORE — Professional LED Track Lighting & Downlight Manufacturer
     template: '%s — ENCORE'
-  description: "Shenzhen Encore Optoelectronic Technology Co., Ltd. is a professional track lighting and LED downlight manufacturer offering OEM/ODM services. ETL/CE/ISO certified factory."
+  description: "Shenzhen Encore Optoelectronic Technology Co., Ltd. is a professional LED track lighting and downlight manufacturer offering OEM/ODM services. ETL/CE/ISO certified factory since 2011."
   robots:
     index: true
     follow: true
@@ -35,31 +35,26 @@ apps:
   blog:
     isEnabled: true
     postsPerPage: 6
-
     post:
       isEnabled: true
       permalink: '/%slug%'
       robots:
         index: true
-
     list:
       isEnabled: true
       pathname: 'blog'
       robots:
         index: true
-
     category:
       isEnabled: true
       pathname: 'category'
       robots:
         index: true
-
     tag:
       isEnabled: true
       pathname: 'tag'
       robots:
         index: false
-
     isRelatedPostsEnabled: true
     relatedPostsCount: 4
 

@@ -10,19 +10,18 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'ENCORE — Professional Track Lighting & LED Downlight Manufacturer',
+  title: 'ENCORE — Professional LED Track Lighting & Downlight Manufacturer',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
+  <!-- Hero Widget -->
   <Hero
     actions={[
       {
         variant: 'primary',
-        text: 'Get a Quote',
+        text: 'Request a Quote',
         href: '/contact',
       },
       {
@@ -31,168 +30,251 @@ const metadata = {
         href: '#products',
       },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'ENCORE Track Lighting Products' }}
+    image={{
+      src: '~/assets/images/applications/app-optics-web-05.jpg',
+      alt: 'ENCORE Commercial LED Lighting Solutions',
+    }}
   >
     <Fragment slot="title">
-      Professional <span class="text-accent dark:text-white">Track Lighting</span> &amp; LED Downlight Manufacturer
+      Professional <span class="text-accent dark:text-white">LED Track Lighting</span> &amp; Downlight Manufacturer
     </Fragment>
-
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        UL / CE / DLC certified factory. OEM &amp; ODM services available.
-        <span class="block mt-1">
-          Track lighting, LED downlights, magnetic track systems — custom solutions for commercial and residential projects worldwide.
-        </span>
-      </span>
-      <span class="block sm:hidden">
-        UL/CE/DLC certified. OEM &amp; ODM. Global shipping.
-      </span>
+      ENCORE is dedicated to researching, developing and manufacturing high quality LED luminaires
+      and providing premium LED lighting solutions for commercial spaces, hotels, museums, galleries and offices.
+      <span class="block mt-2 font-semibold">ETL / CE / ISO certified &middot; OEM &amp; ODM &middot; Since 2011</span>
     </Fragment>
   </Hero>
 
-  <!-- Features Widget *************** -->
-
+  <!-- Why Choose ENCORE -->
   <Features
     id="why-us"
     tagline="Why Choose ENCORE"
     title="LED Lighting Manufacturer You Can Trust"
-    subtitle="With years of manufacturing expertise, we deliver premium LED lighting solutions for commercial projects worldwide — retail, hospitality, museums, and more."
-
+    subtitle="With over a decade of expertise, we deliver premium LED lighting solutions for B2B partners across 85+ countries worldwide."
     items={[
       {
-        title: 'ETL / CE / RoHS / ISO Certified',
+        title: 'ETL / CE / ISO / SAA Certified',
         description:
-          'All our products meet international safety and quality standards. ETL, CE, RoHS, ISO, SAA certified. Full documentation available upon request.',
+          'All products meet rigorous international safety and quality standards. Full certification documentation available upon request for every shipment.',
         icon: 'tabler:shield-check',
       },
       {
         title: 'OEM & ODM Manufacturing',
         description:
-          'Custom designs, branding, packaging, and specifications. Our R&D team works with you to create the perfect lighting solution for your market.',
+          'Custom designs, branding, packaging, and specifications tailored to your market. R&D team covering industrial design, optics, thermal, electronics, and structure.',
         icon: 'tabler:settings',
       },
       {
-        title: 'Strict Quality Control',
+        title: 'In-House Factory Since 2014',
         description:
-          'Every batch undergoes incoming inspection, SMT assembly, aging test, and final QC before shipment. ISO-standard production lines ensure consistent quality.',
+          '2/F, Bldg 8th, Zhengzhong Industrial Park, Fuyong, Shenzhen. Full control over production, quality, and supply chain. ERP system for end-to-end traceability.',
+        icon: 'tabler:building-factory',
+      },
+      {
+        title: 'Stringent Quality Control',
+        description:
+          'IQC incoming inspection &rarr; IPQC process control &rarr; 100% aging test &rarr; OQC final inspection. ISO9001:2018 certified quality management system.',
         icon: 'tabler:clipboard-check',
       },
       {
-        title: 'Factory Direct Pricing',
+        title: 'Global Reach',
         description:
-          'No middlemen. Get competitive wholesale pricing directly from the manufacturer. Flexible MOQ for trial orders and new partnerships.',
-        icon: 'tabler:currency-dollar',
-      },
-      {
-        title: 'Global Shipping',
-        description:
-          'Reliable logistics partners ensure fast delivery worldwide. DDP, FOB, CIF, EXW terms available. HK HQ + Shenzhen factory for efficient supply chain.',
+          'Products exported to 85+ countries across North America, Europe, Australia, Southeast Asia, Middle East and Latin America. HK HQ + Shenzhen factory.',
         icon: 'tabler:world',
       },
       {
-        title: '5-Year Warranty',
+        title: 'R&D Innovation',
         description:
-          'Confidence in our products. We stand behind every shipment with a comprehensive warranty and dedicated after-sales support team.',
-        icon: 'tabler:award',
+          'High-tech enterprise with multiple patents. Advanced R&D lab with photoelectric, safety reliability, and EMC testing capabilities. 9 product families and growing.',
+        icon: 'tabler:bulb',
       },
     ]}
   />
 
-  <!-- Products Content Widget ******** -->
-
+  <!-- Products Showcase -->
   <Content
     id="products"
     isReversed
     isAfterContent
     tagline="Our Products"
-    title="Track Lighting & LED Downlights"
-    subtitle="Complete range of commercial and residential lighting solutions"
+    title="Complete LED Lighting Product Families"
+    subtitle="9 product families covering every commercial lighting application"
     items={[
       {
         title: 'Track Lighting Systems',
         description:
-          'H-Type, J-Type, L-Type, and magnetic track systems. Single-circuit and dual-circuit options. Linear and flexible configurations for retail, museums, galleries, and residential spaces.',
+          'VEGA, OVEGA, IMAX, FLEX track light systems. Multiple beam angles, wattages, and color temperatures. Suitable for retail, museums, galleries, and hospitality.',
       },
       {
         title: 'LED Downlights',
         description:
-          'Dimmable, IC-rated, and commercial-grade LED downlights. Multiple sizes (4", 6", 8"), wattages, and color temperatures (2700K-5000K). COB and SMD options available.',
+          'DELLA Mini, ELLA, Galaxy, AVA MR16 downlight systems. Modular designs, tunable white options, smart dimming. From 2-inch mini downlights to high-ceiling 4-8m solutions.',
       },
       {
-        title: 'Magnetic Track Lights',
+        title: 'Linear & Cylinder Lighting',
         description:
-          'Next-generation magnetic track lighting systems. Easy installation, modular design, and sleek aesthetics. Ideal for modern commercial and high-end residential projects.',
+          'Linear Light System and Cylinder Light System for modern architectural lighting. Clean aesthetics, high performance, flexible installation.',
+      },
+      {
+        title: 'Specialty Lighting',
+        description:
+          'Magnetic Track Lights, Motorized Remote Controlled Lighting, ETL Downlights, Wall Luminaires. Custom solutions for unique project requirements.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1520128955643-50c3c6b7e4a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      alt: 'ENCORE Lighting Products',
+      src: '~/assets/images/applications/app-cutlight-web-01.jpg',
+      alt: 'ENCORE LED Track Lighting Products',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Complete Lighting Solutions for Every Project
+        9 Product Families &amp; Growing
       </h3>
-      From concept to delivery — we handle every step of the manufacturing process.
+      From design to delivery — comprehensive LED lighting solutions for every commercial space.
     </Fragment>
   </Content>
 
-  <!-- Stats Widget ****************** -->
+  <!-- Factory & Quality -->
+  <Content
+    isAfterContent
+    tagline="Factory & Quality"
+    title="In-House Manufacturing Excellence"
+    subtitle="Since 2014, our Shenzhen factory has been the backbone of ENCORE quality"
+    items={[
+      {
+        title: 'Modern Production Facility',
+        description:
+          '2/F Bldg 8th, Zhengzhong Industrial Park, Fuyong, Shenzhen. Equipped with professional SMT lines, assembly workstations, and aging test rooms for mass production.',
+      },
+      {
+        title: 'Quality Control Process',
+        description:
+          'IQC: Incoming material inspection per AQL standard &rarr; IPQC: In-process inspection &rarr; 100% aging test &rarr; OQC: Final function and electrical testing. Full traceability with tracking codes.',
+      },
+      {
+        title: 'R&D Laboratory',
+        description:
+          'Professional R&D lab with integrating sphere, IES testing, temperature and waterproof testing, IK/fire class testing, EMC testing. Photoelectric, safety, and reliability verification.',
+      },
+      {
+        title: 'Showroom & Warehouse',
+        description:
+          '900 sqm showroom displaying all product families. 2000 sqm warehouse with inventory management system for efficient order fulfillment.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/factory/fac-newfactory-web-01.jpg',
+      alt: 'ENCORE Factory and Production Facility',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Quality Built In, Every Step of the Way
+      </h3>
+      ISO9001:2018 certified production processes ensure consistent quality across every order.
+    </Fragment>
+  </Content>
 
+  <!-- Certifications -->
+  <Content
+    isReversed
+    isAfterContent
+    tagline="Certifications"
+    title="Global Certifications for Global Markets"
+    subtitle="Full compliance with international safety and quality standards"
+    items={[
+      {
+        title: 'ETL Certification',
+        description:
+          'Products certified for North American market. Meets UL standards for safety and performance in the USA and Canada.',
+      },
+      {
+        title: 'CE Certification',
+        description:
+          'LVD and EMC directives compliance for European market. Full range of track lights and downlights CE certified.',
+      },
+      {
+        title: 'SAA Certification',
+        description:
+          'AIMER, AXIS, FLEX, IMAX, and OVEGA series SAA certified for Australian and New Zealand markets.',
+      },
+      {
+        title: 'ISO9001:2018 & High-Tech',
+        description:
+          'ISO9001:2018 certified quality management system. Recognized as a High-Technology Enterprise with multiple design and utility model patents.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/certifications/ETL_Certificate.jpg',
+      alt: 'ENCORE ETL Certification',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        40+ Certification Documents Available
+      </h3>
+      ETL &middot; CE (LVD+EMC) &middot; SAA &middot; ISO9001:2018 &middot; Patents
+    </Fragment>
+  </Content>
+
+  <!-- Stats -->
   <Stats
     stats={[
-      { title: 'Years in Lighting', amount: '10+' },
+      { title: 'Years in Industry', amount: '15+' },
       { title: 'Product Families', amount: '9' },
-      { title: 'Markets Served', amount: '60+' },
+      { title: 'Export Countries', amount: '85+' },
       { title: 'Global Projects', amount: '1000+' },
     ]}
   />
 
-  <!-- OEM/ODM Content Widget ******** -->
-
+  <!-- Company Journey -->
   <Content
     isAfterContent
-    tagline="OEM & ODM Services"
-    title="Custom Lighting Manufacturing"
+    tagline="Our Journey"
+    title="From 2011 to Today — A Story of Growth"
+    subtitle="Key milestones that shaped ENCORE into a trusted lighting manufacturer"
     items={[
       {
-        title: 'Custom Design',
+        title: '2011 — 2013: Foundation',
         description:
-          'Work with our engineering team to develop custom lighting products tailored to your specifications and market requirements.',
+          'Founded in 2011 as a foreign trading company focused on LED commercial lighting. Built our own R&D team in 2013 and released the first self-developed LED track light — Aimer.',
       },
       {
-        title: 'Branding & Packaging',
+        title: '2014 — 2017: Factory & Expansion',
         description:
-          'Your brand, your packaging. We offer custom logo printing, brand-color finishing, and retail-ready packaging design.',
+          'Established our own factory in 2014. Released 11 track light and 3 downlight families by 2016. Expanded to a larger facility with professional equipment in 2017.',
       },
       {
-        title: 'Sample Development',
+        title: '2018 — 2020: Innovation & Recognition',
         description:
-          'Rapid prototyping and sample development. Approve the design before mass production. Typical sample lead time: 7-15 days.',
+          'High-tech enterprise certification with multiple patents. ERP system and ISO9001:2018 upgrade. Launched ELLA modular downlight system in 2020.',
       },
       {
-        title: 'Bulk Production',
+        title: '2021 — Today: Global Growth',
         description:
-          'Factory capacity of 500,000+ units per month. Consistent quality across all production batches with full traceability.',
+          'Galaxy downlight system for high ceilings. Brand upgrade and FEILITE sub-brand launch. Serving 85+ countries with comprehensive product families.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      alt: 'ENCORE Factory and Manufacturing',
+      src: '~/assets/images/factory/fac-showroom-web-01.jpg',
+      alt: 'ENCORE Showroom',
     }}
   >
-    <Fragment slot="content">Partner with a manufacturer who understands your business.</Fragment>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        15+ Years of Lighting Excellence
+      </h3>
+      From a trading company to a global lighting manufacturer — built on innovation, quality, and trust.
+    </Fragment>
   </Content>
 
-  <!-- BlogLatestPosts Widget ******** -->
-
+  <!-- BlogLatestPosts Widget -->
   <BlogLatestPosts
-    title="Latest from Our Blog"
-    information="Lighting industry insights, product guides, and company updates from ENCORE."
+    title="Latest from ENCORE Blog"
+    information="Lighting industry insights, product guides, and company updates."
   />
 
-  <!-- FAQs Widget ******************* -->
-
+  <!-- FAQs Widget -->
   <FAQs
     title="Frequently Asked Questions"
     subtitle="Common questions about working with ENCORE as your lighting manufacturing partner."
@@ -202,38 +284,37 @@ const metadata = {
       {
         title: 'What certifications do your products have?',
         description:
-          'Our products are certified with UL, cUL, ETL, CE, RoHS, and DLC depending on the product line and target market. We also comply with Title 20/Title 24 requirements for California. Contact us for specific certification documents.',
-      },
-      {
-        title: 'What is the minimum order quantity (MOQ)?',
-        description:
-          "Our standard MOQ is 500 units per model for OEM orders. However, we offer flexible MOQ options for trial orders and new partnerships. Contact our sales team to discuss your specific requirements.",
+          'Our products are certified with ETL (North America), CE (Europe), SAA (Australia/New Zealand), and ISO9001:2018 (Quality Management). We also hold multiple design and utility model patents. Contact us for specific certification documents for your target market.',
       },
       {
         title: 'Can you customize products with my brand?',
         description:
-          'Absolutely. We offer full OEM and ODM services including custom housing colors, logo printing, branded packaging, custom wattages and color temperatures, and private label solutions. Your brand, your specifications.',
+          'Absolutely. We offer full OEM and ODM services including custom housing colors, logo printing, branded packaging, custom wattages, color temperatures, and private label solutions. Our R&D team works with you to create the perfect product for your market.',
       },
       {
-        title: 'What is the typical lead time?',
+        title: 'What is your MOQ and lead time?',
         description:
-          'Sample lead time: 7-15 days. Bulk production lead time: 25-45 days depending on order quantity and customization level. We work with reliable logistics partners for fast shipping worldwide.',
+          'Standard MOQ is 500 units per model for OEM orders, with flexible options for trial orders. Sample lead time: 7-15 days. Bulk production: 25-45 days depending on quantity and customization level.',
       },
       {
         title: 'Do you offer warranty on your products?',
         description:
-          'Yes, we offer a 5-year warranty on all our LED lighting products. Our after-sales team provides prompt support for any quality concerns within the warranty period.',
+          'Yes, we offer a comprehensive 5-year warranty on all LED lighting products. Our after-sales team provides prompt support for any quality concerns within the warranty period.',
       },
       {
-        title: 'Which payment methods do you accept?',
+        title: 'What markets do you serve?',
         description:
-          'We accept T/T (wire transfer), L/C (letter of credit), and Alibaba Trade Assurance. Payment terms are negotiable for established partnerships and long-term cooperation.',
+          'We export to over 85 countries across North America, Europe, Australia, Southeast Asia, Middle East, and Latin America. Our HK HQ handles global logistics while our Shenzhen factory manages production.',
+      },
+      {
+        title: 'How do I request a quote?',
+        description:
+          'Contact our sales team via email at sales@encore-tech.com, WhatsApp at +852 6768 2519, or use the contact form on our website. We typically respond within 24 hours with detailed pricing and product information.',
       },
     ]}
   />
 
-  <!-- CallToAction Widget *********** -->
-
+  <!-- CallToAction -->
   <CallToAction
     actions={[
       {
@@ -243,8 +324,8 @@ const metadata = {
       },
       {
         variant: 'secondary',
-        text: 'Send Inquiry',
-        href: '/contact',
+        text: 'Email Us',
+        href: 'mailto:sales@encore-tech.com',
       },
     ]}
   >
@@ -253,7 +334,7 @@ const metadata = {
     </Fragment>
     <Fragment slot="subtitle">
       Get in touch with our team for product information, pricing, or custom manufacturing inquiries.
-      <br class="hidden md:inline" /> We typically respond within 24 hours.
+      <br class="hidden md:inline" /> Email: sales@encore-tech.com | Tel: +852 6768 2519
     </Fragment>
   </CallToAction>
 </Layout>
