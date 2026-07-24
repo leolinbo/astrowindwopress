@@ -1,0 +1,117 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'OEM & ODM LED Lighting Manufacturer — Custom Solutions | ENCORE',
+};
+---
+
+<Layout metadata={metadata}>
+  <Content
+    tagline="OEM & ODM Services"
+    title="Custom LED Lighting Manufacturing"
+    subtitle="Your brand, your specifications, our manufacturing expertise"
+    items={[
+      {
+        title: 'OEM Manufacturing',
+        description:
+          'We manufacture LED lighting products according to your exact specifications. Your designs, our production capabilities. Full support for custom dimensions, wattages, color temperatures, and finishes.',
+      },
+      {
+        title: 'ODM Services',
+        description:
+          'Choose from our 9 product families and customize them for your market. Our R&D team adapts existing designs to meet your specific requirements, reducing development time and costs.',
+      },
+      {
+        title: 'Custom Branding & Packaging',
+        description:
+          'Custom logo printing, brand-color finishing, and retail-ready packaging design. Your brand, your presentation — we make it happen.',
+      },
+      {
+        title: 'Sample Development',
+        description:
+          'Rapid prototyping and sample development. Typical sample lead time: 7-15 days. Approve the design before mass production.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/factory/fac-showroom-web-03.jpg',
+      alt: 'ENCORE OEM Manufacturing Capabilities',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Your Vision, Our Manufacturing
+      </h3>
+      From concept to delivery — a complete OEM/ODM partnership.
+    </Fragment>
+  </Content>
+
+  <Features
+    tagline="Why Partner with ENCORE"
+    title="OEM/ODM Manufacturing Advantages"
+    subtitle="15+ years of lighting manufacturing expertise at your service"
+    items={[
+      {
+        title: 'Full R&D Capability',
+        description:
+          'In-house R&D team covering industrial design, optics, thermal, electronics, and structure. From concept to mass production, we handle it all.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Quality Assurance',
+        description:
+          'ISO9001:2018 certified. IQC → IPQC → 100% aging test → OQC. Full traceability with tracking codes for every order.',
+        icon: 'tabler:clipboard-check',
+      },
+      {
+        title: 'Flexible MOQ',
+        description:
+          'Standard MOQ of 500 units per model with flexible options for trial orders. We work with you to find the right quantity for your market entry.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Global Certifications',
+        description:
+          'ETL, CE, SAA certified products. We ensure your products meet the regulatory requirements of your target market.',
+        icon: 'tabler:award',
+      },
+      {
+        title: 'Competitive Pricing',
+        description:
+          'Factory direct pricing with no middlemen. Benefit from our Shenzhen manufacturing base and efficient supply chain management.',
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Reliable Delivery',
+        description:
+          'Bulk production lead time: 25-45 days. Reliable logistics partners for global shipping. DDP, FOB, CIF, EXW terms available.',
+        icon: 'tabler:truck-delivery',
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Your OEM Project',
+        href: '/contact',
+      },
+      {
+        variant: 'secondary',
+        text: 'Email Us',
+        href: 'mailto:sales@encore-tech.com',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to Discuss Your <span class="sm:whitespace-nowrap">OEM/ODM Project</span>?
+    </Fragment>
+    <Fragment slot="subtitle">
+      Contact our team to discuss your requirements. We typically respond within 24 hours.
+    </Fragment>
+  </CallToAction>
+</Layout>

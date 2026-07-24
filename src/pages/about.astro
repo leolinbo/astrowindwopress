@@ -1,228 +1,212 @@
 ---
-import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'About ENCORE — LED Lighting Manufacturer Since 2011',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
+  <!-- Hero -->
   <Hero
-    tagline="About us"
+    tagline="About ENCORE"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      src: '~/assets/images/factory/fac-showroom-web-01.jpg',
+      alt: 'ENCORE Showroom',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white"> Beautiful Website Templates</span>
+      <span class="text-accent dark:text-white">LED Lighting Manufacturer</span> Since 2011
     </Fragment>
-
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      ENCORE is dedicated to researching, developing and manufacturing high quality LED luminaires
+      and providing premium LED lighting solutions for commercial spaces worldwide.
+      Headquartered in Shenzhen, China, with a sound distributor system in domestic and overseas markets.
     </Fragment>
   </Hero>
 
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    title="Statistics about us"
-    stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
+  <!-- Company Story -->
+  <Content
+    tagline="Our Story"
+    title="We Are ENCORE"
     items={[
       {
-        title: 'Educational',
+        title: 'Our Mission',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+          'To create healthy and smart light for our world through continuous innovation and superior quality.',
       },
       {
-        title: 'Interior Design',
+        title: 'Our Journey',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+          'Starting from 2011, ENCORE has devoted itself to the LED lighting industry. Our journey began with foreign trading and evolved into a full-fledged manufacturer with our own factory, R&D team, and a complete quality management system.',
       },
       {
-        title: 'Photography',
+        title: 'Our Market',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
-      },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
+          'Products are exported to over 85 countries and regions including North America, Europe, Australia, Southeast Asia, Middle East, and Latin America. We serve retail, hospitality, museum, gallery, and commercial office projects.',
       },
       {
-        title: 'Blog',
+        title: 'Our Commitment',
         description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
+          'We win customers with value creation, impress with fine craftsmanship, amaze with innovation, and assure with concerted action. Every product reflects our dedication to quality and reliability.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
+      src: '~/assets/images/factory/fac-visit-web-01.jpg',
+      alt: 'ENCORE Factory Visit',
     }}
-  />
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Premium LED Lighting Solutions
+      </h3>
+      Distinctive in both function and aesthetic design — enhancing commercial spaces worldwide.
+    </Fragment>
+  </Content>
 
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
-    items={[
-      {
-        title: 'Customer-centric approach',
-        description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
-      },
-      {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
-      },
-      {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      },
+  <!-- Stats -->
+  <Stats
+    stats={[
+      { title: 'Years in Lighting', amount: '15+' },
+      { title: 'Product Families', amount: '9' },
+      { title: 'Export Countries', amount: '85+' },
+      { title: 'Global Projects', amount: '1000+' },
     ]}
   />
 
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
+  <!-- History Timeline -->
+  <Steps
+    title="Our Journey — Key Milestones"
     items={[
       {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
+        title: '2011: <span class="font-medium">Founded</span>',
+        description:
+          'Started as a foreign trading company focused on LED commercial lighting, with a deepening understanding of customer needs and market demands.',
+        icon: 'tabler:stars',
       },
       {
-        title: 'Positive customer feedback and reviews',
+        title: '2013: <span class="font-medium">First Track Light</span>',
         description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
+          'Set up our own R&D team and released the first self-developed LED track light — Aimer.',
+        icon: 'tabler:bulb',
       },
       {
-        title: 'Awards and recognition as industry experts',
+        title: '2014: <span class="font-medium">Own Factory</span>',
         description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
+          'Established our own factory from 0 to 1, building supply chain management and quality control systems.',
+        icon: 'tabler:building',
+      },
+      {
+        title: '2016-17: <span class="font-medium">Growth</span>',
+        description:
+          'Released 11 new track light products and 3 LED downlight families. Expanded to a new factory with professional facilities.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: '2018-19: <span class="font-medium">Certification</span>',
+        description:
+          'High-tech enterprise certification with multiple patents. Upgraded to ISO9001:2018 quality system and implemented ERP management.',
         icon: 'tabler:award',
       },
+      {
+        title: '2020+: <span class="font-medium">Innovation</span>',
+        description:
+          'Launched ELLA, Galaxy, and multiple new product families. Brand upgrade with new vision and mission. Serving 85+ countries.',
+        icon: 'tabler:rocket',
+      },
     ]}
+    image={{
+      src: '~/assets/images/factory/fac-office-web-01.jpg',
+      alt: 'ENCORE Office',
+    }}
   />
 
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
+  <!-- Factory Facilities -->
+  <Content
+    isReversed
+    tagline="Factory Tour"
+    title="Our Shenzhen Factory"
+    subtitle="2/F, Bldg 8th, Zhengzhong Industrial Park, Qiaotou Community, Fuyong, Bao'an Dist, Shenzhen"
     items={[
       {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
+        title: 'Showroom',
+        description:
+          '900 sqm showroom displaying all 9 product families — track lights, downlights, linear lights, and more.',
       },
       {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
+        title: 'Production Workshop',
+        description:
+          'Professional SMT assembly lines, workstations, and assembly areas for efficient manufacturing and consistent quality.',
       },
       {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
+        title: 'Testing & Aging Lab',
+        description:
+          'Complete testing facilities for photoelectric, safety, and reliability verification. 100% aging test for every order.',
       },
       {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+        title: 'Warehouse & Logistics',
+        description:
+          '2000 sqm warehouse with inventory management system for efficient order fulfillment and global shipping.',
       },
     ]}
-  />
+    image={{
+      src: '~/assets/images/factory/fac-newfactory-web-01.jpg',
+      alt: 'ENCORE Factory Building',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Full In-House Manufacturing
+      </h3>
+      From raw materials to finished products — total control over quality and delivery.
+    </Fragment>
+  </Content>
 
-  <!-- Features2 Widget ************** -->
-
+  <!-- Global Market -->
   <Features2
-    title="Technical Support"
-    tagline="Contact us"
-    columns={2}
+    title="Global Market Reach"
+    subtitle="Products exported to over 85 countries across 6 continents"
+    columns={3}
     items={[
       {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
+        title: 'North America',
+        description: 'USA, Canada, Mexico — ETL certified products for commercial projects.',
+        icon: 'tabler:world',
       },
       {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+        title: 'Europe',
+        description: 'EU market with CE (LVD+EMC) certified products for retail, hospitality, and office.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Australia & Oceania',
+        description: 'SAA certified products for Australian and New Zealand markets.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Southeast Asia',
+        description: 'Growing presence in Singapore, Malaysia, Thailand, Vietnam, and Philippines.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Middle East',
+        description: 'Projects in UAE, Saudi Arabia, Qatar for hospitality and retail sectors.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Latin America',
+        description: 'Expanding distribution in Brazil, Mexico, Chile, and Colombia.',
+        icon: 'tabler:world',
       },
     ]}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
 </Layout>

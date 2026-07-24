@@ -1,0 +1,91 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Track Lighting Manufacturer — LED Track Lights | ENCORE',
+};
+---
+
+<Layout metadata={metadata}>
+  <Content
+    tagline="Products"
+    title="LED Track Lighting Manufacturer"
+    subtitle="Complete track lighting systems for retail, hospitality, museums, and commercial spaces"
+    items={[
+      {
+        title: 'VEGA Track Light System',
+        description:
+          'Versatile track light series with multiple beam angles and wattages. Ideal for retail, galleries, and general commercial lighting.',
+      },
+      {
+        title: 'OVEGA Track Light System',
+        description:
+          'Premium track light system with advanced thermal management and high CRI options. Suitable for high-end retail and museum applications.',
+      },
+      {
+        title: 'IMAX Track Light System',
+        description:
+          'High-output track lighting for spaces requiring higher illumination levels. Excellent for commercial and industrial applications.',
+      },
+      {
+        title: 'FLEX Track Light System',
+        description:
+          'Flexible track light system with adjustable heads and multiple mounting options. Perfect for accent and display lighting.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/products/prod-ovega-web-01.jpg',
+      alt: 'OVEGA Track Light System by ENCORE',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Professional Track Lighting Solutions
+      </h3>
+      ETL, CE, and SAA certified track lighting systems for global projects.
+    </Fragment>
+  </Content>
+
+  <Features2
+    title="Track Lighting Applications"
+    columns={3}
+    items={[
+      {
+        title: 'Retail Stores',
+        description: 'Highlight merchandise and create inviting shopping environments with precise beam control.',
+        icon: 'tabler:shopping-bag',
+      },
+      {
+        title: 'Museums & Galleries',
+        description: 'Protect artifacts with low-heat LED track lights while achieving perfect color rendering.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Hotels & Hospitality',
+        description: 'Create ambient and accent lighting zones in lobbies, restaurants, and guest areas.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Commercial Offices',
+        description: 'Flexible task and ambient lighting for modern workspace environments.',
+        icon: 'tabler:building-community',
+      },
+      {
+        title: 'Showrooms',
+        description: 'Adaptable lighting that can be reconfigured as displays change.',
+        icon: 'tabler:frame',
+      },
+      {
+        title: 'Residential',
+        description: 'Sleek, minimal track lighting for contemporary home interiors.',
+        icon: 'tabler:home',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+</Layout>

@@ -5,75 +5,89 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Contact Us — Get a Quote from ENCORE',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
-
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText tagline="Contact Us" title="Get in Touch with ENCORE" />
 
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="Send Us an Inquiry"
+    subtitle="Contact our sales team for product information, pricing, or custom manufacturing inquiries. We typically respond within 24 hours."
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: 'Name',
+        label: 'Your Name *',
       },
       {
         type: 'email',
         name: 'email',
-        label: 'Email',
+        label: 'Email *',
+      },
+      {
+        type: 'text',
+        name: 'company',
+        label: 'Company Name',
+      },
+      {
+        type: 'text',
+        name: 'phone',
+        label: 'Phone / WhatsApp',
       },
     ]}
     textarea={{
-      label: 'Message',
+      label: 'Message *',
     }}
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        'By submitting this form, you agree to be contacted by our sales team regarding your inquiry.',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="Prefer to email directly? Send to sales@encore-tech.com"
   />
 
-  <!-- Features2 Widget ************** -->
-
   <Features2
-    title="We are here to help!"
+    title="Contact Information"
+    columns={2}
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
         title: 'Email',
-        description: 'contact@support.com',
+        description: 'sales@encore-tech.com',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
+        title: 'Phone / WhatsApp',
+        description: '+852 6768 2519',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'HK Headquarters',
+        description:
+          'Room 1, 16/F, Empress Plaza 17-19 Chatham Road South, Tsim Sha Tsui, KL',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Shenzhen Factory',
+        description:
+          '2/F, Bldg 8th, Zhengzhong Industrial Park, Qiaotou Community, Fuyong, Bao\'an Dist, Shenzhen, China',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Technical Support',
+        description: 'Rocky Wong — Available for product and technical inquiries',
+        icon: 'tabler:user-circle',
+      },
+      {
+        title: 'Response Time',
+        description: 'We typically respond within 24 hours on business days',
+        icon: 'tabler:clock',
       },
     ]}
-  />
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
 </Layout>

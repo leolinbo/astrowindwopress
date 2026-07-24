@@ -1,0 +1,49 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Magnetic Track Lighting Manufacturer | ENCORE',
+};
+---
+
+<Layout metadata={metadata}>
+  <Content
+    tagline="Products"
+    title="Magnetic Track Lighting Manufacturer"
+    subtitle="Next-generation modular track lighting with magnetic connection system"
+    items={[
+      {
+        title: 'Magnetic Track System',
+        description:
+          'Innovative magnetic track lighting with easy snap-in fixture installation. Modular design allows for quick reconfiguration as lighting needs change.',
+      },
+      {
+        title: 'Flexible Configuration',
+        description:
+          'Multiple track lengths, connector options (L/T/X shape), and fixture types. Surface-mounted and recessed versions available.',
+      },
+      {
+        title: 'Modern Aesthetic',
+        description:
+          'Sleek, minimalist design that blends into contemporary interiors. Ideal for high-end retail, modern offices, and residential projects.',
+      },
+      {
+        title: 'Smart Compatible',
+        description:
+          'Compatible with leading smart control systems for dimming, color tuning, and automated lighting scenes.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/applications/app-cutlight-web-03.jpg',
+      alt: 'ENCORE Magnetic Track Lighting',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        The Future of Track Lighting
+      </h3>
+      Magnetic connection for effortless installation and reconfiguration.
+    </Fragment>
+  </Content>
+</Layout>

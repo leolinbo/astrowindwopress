@@ -1,0 +1,96 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+
+const metadata = {
+  title: 'Quality Control — ISO Certified LED Lighting Manufacturer | ENCORE',
+};
+---
+
+<Layout metadata={metadata}>
+  <Content
+    tagline="Quality Control"
+    title="ISO9001:2018 Certified Quality Management"
+    subtitle="Our 100% confidence in quality lies in details control from every single step"
+    items={[
+      {
+        title: 'IQC — Incoming Inspection',
+        description:
+          'Incoming material inspection is the first and most important step. We follow AQL standard strictly and review QC management for key material suppliers. COB LEDs and drives are stored in constant temperature and humidity environments.',
+      },
+      {
+        title: 'IPQC — Production Process Control',
+        description:
+          'First article approval before mass production. All tools adjusted per SOP. Self-inspection for each procedure. IPQC random inspection for key positions. Tracking codes for each order.',
+      },
+      {
+        title: 'OQC — Output Quality Control',
+        description:
+          '100% aging test for every single order. 100% function and electrical testing. Product reliability and safety inspection with professional equipment.',
+      },
+      {
+        title: 'ISO9001:2018 System',
+        description:
+          'ENCORE is ISO9001:2018 certified. The whole process quality control from R&D, functional performance, durability, and safety is well-inspected and well-documented.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/qc/aging-test-web-01.jpg',
+      alt: 'ENCORE Aging Test Room',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Quality Built Into Every Step
+      </h3>
+      Standardized processes ensure consistent quality regardless of order size.
+    </Fragment>
+  </Content>
+
+  <Steps
+    title="Our Quality Control Flow"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Incoming Inspection</span>',
+        description:
+          'All raw materials and components inspected per AQL standards. Key supplier QC management and review.',
+        icon: 'tabler:clipboard-search',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">First Article Approval</span>',
+        description:
+          'First article must be approved before mass production begins. All tools adjusted per SOP instructions.',
+        icon: 'tabler:clipboard-check',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Production & IPQC</span>',
+        description:
+          'SOP-compliant production with self-inspection at each procedure. IPQC random inspection for key positions.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Step 4: <span class="font-medium">Aging Test</span>',
+        description:
+          '100% aging test for every individual order. Products operated for extended periods to verify reliability.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Step 5: <span class="font-medium">Final Inspection</span>',
+        description:
+          '100% function and electrical testing. Safety and reliability verification with professional equipment.',
+        icon: 'tabler:clipboard-list',
+      },
+      {
+        title: 'Step 6: <span class="font-medium">Shipping</span>',
+        description:
+          'Packed and shipped with full documentation including test reports, certificates, and tracking codes.',
+        icon: 'tabler:truck-delivery',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/qc/aging-test-web-04.jpg',
+      alt: 'ENCORE Quality Testing',
+    }}
+  />
+</Layout>

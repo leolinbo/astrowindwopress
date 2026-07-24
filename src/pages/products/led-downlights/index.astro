@@ -1,0 +1,49 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'LED Downlight Manufacturer — Recessed Downlights | ENCORE',
+};
+---
+
+<Layout metadata={metadata}>
+  <Content
+    tagline="Products"
+    title="LED Downlight Manufacturer"
+    subtitle="Complete downlight systems for every ceiling height and application"
+    items={[
+      {
+        title: 'DELLA Mini Downlight System',
+        description:
+          'Ultra-compact mini downlight system for tight ceiling spaces. Ideal for residential and light commercial applications.',
+      },
+      {
+        title: 'ELLA Downlight System',
+        description:
+          'Super modular design combining hotel, residential, commercial, deep anti-glare, and wall washing in one downlight system. Covers all indoor applications.',
+      },
+      {
+        title: 'Galaxy Downlight System',
+        description:
+          'Small in size but powerful in wattage. Tunable white with smart dimming. Customized for high ceiling 4m-8m height applications.',
+      },
+      {
+        title: 'AVA MR16 Modular Downlight System',
+        description:
+          'MR16 compatible modular downlight system for flexible beam angle and lamp replacement options.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/applications/app-optics-web-08.jpg',
+      alt: 'ENCORE LED Downlights',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Versatile Downlight Solutions
+      </h3>
+      From 2-inch mini downlights to high-ceiling commercial solutions.
+    </Fragment>
+  </Content>
+</Layout>

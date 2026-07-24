@@ -1,0 +1,49 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Commercial LED Lighting Manufacturer | ENCORE',
+};
+---
+
+<Layout metadata={metadata}>
+  <Content
+    tagline="Products"
+    title="Commercial LED Lighting Manufacturer"
+    subtitle="Complete commercial lighting solutions for retail, hospitality, office, and institutional spaces"
+    items={[
+      {
+        title: 'Cylinder Light System',
+        description:
+          'Modern cylindrical luminaires for contemporary commercial spaces. Clean lines, high performance, and flexible mounting options.',
+      },
+      {
+        title: 'Linear Light System',
+        description:
+          'Linear LED lighting for architectural integration. Suitable for suspended, surface, and recessed installations in offices and commercial spaces.',
+      },
+      {
+        title: 'Motorized Remote Controlled Lighting',
+        description:
+          'Innovative motorized track lights with remote control for adjustable beam positioning. Ideal for spaces requiring dynamic lighting arrangements.',
+      },
+      {
+        title: 'Wall Luminaires & ETL Downlights',
+        description:
+          'Wall-mounted lighting fixtures and ETL certified downlights for North American commercial projects.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/applications/app-wallwash-web-03.jpg',
+      alt: 'ENCORE Commercial Lighting Solutions',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Complete Commercial Lighting
+      </h3>
+      Cylinder, linear, motorized, and wall-mounted solutions for every project.
+    </Fragment>
+  </Content>
+</Layout>

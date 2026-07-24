@@ -1,0 +1,60 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Certifications — ETL, CE, SAA, ISO, Patents | ENCORE',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Certifications Overview -->
+  <Content
+    tagline="Certifications"
+    title="Global Certifications for Every Market"
+    subtitle="ENCORE products meet international safety, quality, and performance standards across all major markets"
+    items={[
+      {
+        title: 'ETL Certification — North America',
+        description:
+          'Our products are ETL certified to meet UL standards for safety and performance in the USA and Canada. Commercial projects requiring ETL certification are fully supported.',
+      },
+      {
+        title: 'CE Certification — Europe',
+        description:
+          'LVD (Low Voltage Directive) and EMC (Electromagnetic Compatibility) directives compliance for the European market. Full range of track lights and downlights CE certified.',
+      },
+      {
+        title: 'SAA Certification — Australia & New Zealand',
+        description:
+          'AIMER, AXIS, FLEX, IMAX, and OVEGA series are SAA certified for the Australian and New Zealand markets, ensuring compliance with local safety standards.',
+      },
+      {
+        title: 'ISO9001:2018 — Quality Management',
+        description:
+          'ENCORE is ISO9001:2018 certified, ensuring standardized quality control across all production processes from R&D to final inspection.',
+      },
+      {
+        title: 'High-Tech Enterprise',
+        description:
+          'Recognized as a High-Technology Enterprise in China, a testament to our continuous investment in R&D and innovation since 2011.',
+      },
+      {
+        title: 'Design & Utility Patents',
+        description:
+          'Multiple design patents for track lighting, downlights, and linear luminaires. Utility model patents for adjustable mechanisms, connecting devices, and more.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/certifications/ETL_Certificate.jpg',
+      alt: 'ETL Certification',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        40+ Certification Documents Available
+      </h3>
+      Full documentation provided with every shipment. Contact us for specific certifications for your target market.
+    </Fragment>
+  </Content>
+</Layout>
