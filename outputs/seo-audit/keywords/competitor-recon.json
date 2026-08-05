@@ -1,0 +1,1033 @@
+{
+ "alconlighting.com": {
+  "traffic": {
+   "domain": "alconlighting.com",
+   "title": "Lighting Design Services",
+   "description": "Determining the right amount of light for a room comes down to simple math.",
+   "overview": {
+    "global_rank": 202481,
+    "country_rank": {
+     "country": "US",
+     "rank": 47972
+    },
+    "visits": 172004,
+    "bounce_rate": 0.28043335167483047,
+    "pages_per_visit": 5.706862796988774,
+    "time_on_site_seconds": 640.5355034737094,
+    "month": "2026-06"
+   },
+   "monthly_visits": [
+    {
+     "month": "2026-04",
+     "visits": 268921
+    },
+    {
+     "month": "2026-05",
+     "visits": 309442
+    },
+    {
+     "month": "2026-06",
+     "visits": 172004
+    }
+   ],
+   "traffic_sources": {
+    "direct": 0.4351,
+    "search": 0.3298,
+    "search_organic": 0.2707,
+    "search_paid": 0.0591,
+    "social": 0.0266,
+    "social_organic": 0.0266,
+    "social_paid": 0,
+    "referrals": 0.0239,
+    "paid_referrals": 0.0227,
+    "mail": 0.1612,
+    "gen_ai": 0.0007,
+    "affiliate": 0,
+    "other": 0
+   },
+   "top_keywords": [
+    {
+     "name": "alcon lighting",
+     "volume": 2460,
+     "cpc": 3.51,
+     "estimated_value": 1490
+    },
+    {
+     "name": "what local distributors rep alcon lighting",
+     "volume": 360,
+     "cpc": 0,
+     "estimated_value": 640
+    },
+    {
+     "name": "alcon 12100-8-r",
+     "volume": 600,
+     "cpc": 0,
+     "estimated_value": 580
+    },
+    {
+     "name": "neo ray s22",
+     "volume": 420,
+     "cpc": 0,
+     "estimated_value": 380
+    },
+    {
+     "name": "eurofase 14748-011",
+     "volume": 370,
+     "cpc": 0,
+     "estimated_value": 290
+    }
+   ],
+   "top_regions": [
+    {
+     "country": "US",
+     "name": "United States",
+     "share": 0.8832
+    },
+    {
+     "country": "CA",
+     "name": "Canada",
+     "share": 0.0128
+    },
+    {
+     "country": "AE",
+     "name": "United Arab Emirates",
+     "share": 0.0087
+    },
+    {
+     "country": "IN",
+     "name": "India",
+     "share": 0.0085
+    },
+    {
+     "country": "PH",
+     "name": "Philippines",
+     "share": 0.0068
+    }
+   ],
+   "ai_traffic": null
+  },
+  "backlinks": {
+   "domain": "alconlighting.com",
+   "overview": {
+    "domain_rating": 51,
+    "backlinks": 39501,
+    "referring_domains": 3674,
+    "dofollow_backlinks_pct": 89,
+    "dofollow_referring_domains_pct": 76
+   },
+   "backlinks": [
+    {
+     "from_url": "https://www.archdaily.com/897277/how-to-determine-how-many-led-lumens-youll-need-to-properly-light-your-space",
+     "to_url": "https://www.alconlighting.com/",
+     "title": "How To Determine How Many LED Lumens You’ll Need To Properly Light Your Space | ArchDaily",
+     "anchor": "architectural LED lighting",
+     "domain_rating": 89
+    },
+    {
+     "from_url": "https://en.wikipedia.org/wiki/Track_lighting",
+     "to_url": "https://www.alconlighting.com/blog/home/history-function-track-lighting/",
+     "title": "Track lighting - Wikipedia",
+     "anchor": "the original",
+     "domain_rating": 97
+    },
+    {
+     "from_url": "https://bmf1.ru/articles/poleznye-sovety/malenkaya-garderobnaya-v-kvartire.html",
+     "to_url": "https://alconlighting.com/",
+     "title": "Маленькая гардеробная в квартире — идеи дизайна и планировки: удобные решения для хранения вещей в ограниченном пространстве",
+     "anchor": "https://alconlighting.com",
+     "domain_rating": 21
+    },
+    {
+     "from_url": "https://interiordesign.co.ke/product/small-restaurant-kitchen/",
+     "to_url": "https://www.alconlighting.com/shop-by-application/commercial-kitchen-lighting.html?srsltid=AfmBOoqwRcWddoJOKUU3M7DjuIoG0e6l4USc0jreKenYDrIiC26gRFMd",
+     "title": "Small restaurant kitchen - Interior Design Services",
+     "anchor": "lighting",
+     "domain_rating": 7
+    },
+    {
+     "from_url": "https://canadalightshop.ca/blogs/resources/lights-and-tracks-guide",
+     "to_url": "https://www.alconlighting.com/blog/lighting-design/architectural-trends-2023/",
+     "title": "Lights and Tracks: Everything You Need to Know – Canada Light Shop",
+     "anchor": "uplighting",
+     "domain_rating": 4
+    },
+    {
+     "from_url": "https://blog.positivocasainteligente.com.br/como-calcular-intensidade-de-luz-ideal/",
+     "to_url": "https://www.alconlighting.com/blog/residential-led-lighting/how-do-i-determine-how-many-led-lumens-i-need-for-a-space/",
+     "title": "» Lâmpada inteligente: como calcular a intensidade de luz ideal em um ambiente",
+     "anchor": "Alcon Lighting",
+     "domain_rating": 39
+    },
+    {
+     "from_url": "https://www.lightspeedhq.com/blog/retail-summer-window-display/",
+     "to_url": "https://www.alconlighting.com/blog/lighting-design/best-retail-lighting-application-lighting-practices/?srsltid=AfmBOooXsiGZiTdpYkWj3tijml3LGMs92pQYpy3sOy3DGfoF5p3mhFSq",
+     "title": "Retail Summer Window Display Ideas to Keep Shoppers Coming In (and Spending) - Lightspeed",
+     "anchor": "Thoughtful lighting",
+     "domain_rating": 90
+    },
+    {
+     "from_url": "https://www.archdaily.mx/mx/897793/como-calcular-la-intensidad-de-luz-necesaria-para-tus-ambientes",
+     "to_url": "https://www.alconlighting.com/commercial/led-suspended.html",
+     "title": "Cómo calcular la intensidad de luz necesaria para tus ambientes | ArchDaily México",
+     "anchor": "iluminación de suspensión lineal",
+     "domain_rating": 72
+    },
+    {
+     "from_url": "https://languageoflighting.com/lighting-design-concepts/volumetric-lighting/",
+     "to_url": "https://www.alconlighting.com/",
+     "title": "Volumetric Lighting Design in Video Games – Language of Lighting",
+     "anchor": "Alcon Lighting Alcon Lighting",
+     "domain_rating": 9
+    },
+    {
+     "from_url": "https://www.housedigest.com/839065/tour-bretman-rocks-eclectic-hawaii-home/",
+     "to_url": "https://www.alconlighting.com/blog/home/led-innovations-art-top-artists-use-light-medium/",
+     "title": "Tour Bretman Rock's Eclectic Hawaii Home",
+     "anchor": "Insights by Alcon Lighting",
+     "domain_rating": 75
+    },
+    {
+     "from_url": "https://www.louispoulsen.com/en-us/guides-inspiration/what-is-lighting-color-temperature",
+     "to_url": "https://www.alconlighting.com/blog/learning-lab/color-temperature-guide/",
+     "title": "What is Lighting Color Temperature? | Light Temperature Scale | Louis Poulsen",
+     "anchor": "https://www.alconlighting.com/blog/learning-lab/color-temperature-guide/",
+     "domain_rating": 72
+    },
+    {
+     "from_url": "https://www.appliedglobal.com/auditorium-av-design/",
+     "to_url": "https://www.alconlighting.com/blog/residential-led-lighting/how-do-i-determine-how-many-led-lumens-i-need-for-a-space/",
+     "title": "6 Unique Considerations for Auditorium AV Design | AGT",
+     "anchor": "5,000 lumens",
+     "domain_rating": 30
+    },
+    {
+     "from_url": "https://www.archdaily.cl/cl/897793/como-calcular-la-intensidad-de-luz-necesaria-para-tus-ambientes",
+     "to_url": "https://www.alconlighting.com/commercial/led-suspended.html/",
+     "title": "Cómo calcular la intensidad de luz necesaria para tus ambientes | ArchDaily en Español",
+     "anchor": "iluminación de suspensión lineal",
+     "domain_rating": 76
+    },
+    {
+     "from_url": "https://www.seuslighting.com/blogs/p/rustic-lighting-ideas-for-a-cozy-retreat",
+     "to_url": "https://www.alconlighting.com/blog/residential-led-lighting/how-do-i-determine-how-many-led-lumens-i-need-for-a-space/",
+     "title": "Rustic Lighting Ideas for 2026: 27 Warm Looks – Seus Lighting",
+     "anchor": "Source",
+     "domain_rating": 48
+    },
+    {
+     "from_url": "https://risuncorp.com/how-bright-is-2000-lumens/",
+     "to_url": "https://www.alconlighting.com/blog/residential-led-lighting/how-do-i-determine-how-many-led-lumens-i-need-for-a-space/?srsltid=AfmBOorKVR3rArSvXjwz-eSIjnhiG8etPQHCNRcUyrpBq6cLUqm5gasd",
+     "title": "How Bright Is 2000 Lumens? Comparison Of Light Bulb Types.",
+     "anchor": "lumen output",
+     "domain_rating": 8
+    },
+    {
+     "from_url": "https://lumenture.com/blog/5-key-benefits-of-track-lighting/",
+     "to_url": "https://www.alconlighting.com/blog/home/history-function-track-lighting/",
+     "title": "5 Key Benefits of Track Lighting – Lumenture",
+     "anchor": "60 years.",
+     "domain_rating": 32
+    },
+    {
+     "from_url": "https://www.officernd.com/blog/best-office-lighting/",
+     "to_url": "https://www.alconlighting.com/blog/residential-led-lighting/how-do-i-determine-how-many-led-lumens-i-need-for-a-space/",
+     "title": "18 Best Office Lighting Options For Optimal Productivity [2023]",
+     "anchor": "1000–1500 lumens",
+     "domain_rating": 77
+    },
+    {
+     "from_url": "https://www.9wood.com/blog/lighting-integration/",
+     "to_url": "https://www.alconlighting.com/commercial.html",
+     "title": "Lighting Integration in Wood Ceilings - 9Wood",
+     "anchor": "Lighting manufacturers also offer a variety of resources online,",
+     "domain_rating": 40
+    },
+    {
+     "from_url": "https://www.archdaily.com.br/br/897537/como-calcular-a-intensidade-de-luz-necessaria-em-seus-ambientes",
+     "to_url": "https://www.alconlighting.com/commercial/led-suspended.html",
+     "title": "Como calcular a intensidade de luz necessária em seus ambientes | ArchDaily Brasil",
+     "anchor": "iluminação LED",
+     "domain_rating": 76
+    },
+    {
+     "from_url": "https://rhealedlinear.com/product-category/business-professionals/profile-lighting/bendable-wave-profile/",
+     "to_url": "https://www.alconlighting.com/commercial/cove-lighting.html?srsltid=AfmBOoqUWY-_0tbCC-kUSIUSnbUanZpZTFZaYkCvPrz1w8xPiM4URg8c",
+     "title": "Bendable lighting profile for curved architectural lighting",
+     "anchor": "alconlighting.com",
+     "domain_rating": 17
+    }
+   ]
+  }
+ },
+ "grnled.com": {
+  "traffic": {
+   "domain": "grnled.com",
+   "title": "Recessed Trimless Linear Lighting - GRNLED",
+   "description": "Recessed Trimless Linear Lighting",
+   "overview": {
+    "global_rank": 1362131,
+    "country_rank": {
+     "country": "US",
+     "rank": 1242875
+    },
+    "visits": 20639,
+    "bounce_rate": 0.37551287248882803,
+    "pages_per_visit": 1.6612978239868623,
+    "time_on_site_seconds": 12.714628187216825,
+    "month": "2026-06"
+   },
+   "monthly_visits": [
+    {
+     "month": "2026-04",
+     "visits": 24066
+    },
+    {
+     "month": "2026-05",
+     "visits": 20427
+    },
+    {
+     "month": "2026-06",
+     "visits": 20639
+    }
+   ],
+   "traffic_sources": {
+    "direct": 0,
+    "search": 0,
+    "search_organic": 0,
+    "search_paid": 0,
+    "social": 0,
+    "social_organic": 0,
+    "social_paid": 0,
+    "referrals": 0,
+    "paid_referrals": 0,
+    "mail": 0,
+    "gen_ai": 0,
+    "affiliate": 0,
+    "other": 0
+   },
+   "top_keywords": [
+    {
+     "name": "3000 vs 4000 kelvin light",
+     "volume": 1120,
+     "cpc": 0.93,
+     "estimated_value": 140
+    },
+    {
+     "name": "hanging light for office work area image",
+     "volume": 90,
+     "cpc": 0,
+     "estimated_value": 80
+    },
+    {
+     "name": "india to kenya customs duty rate led lights",
+     "volume": 310,
+     "cpc": 0,
+     "estimated_value": 60
+    },
+    {
+     "name": "magnetic track light",
+     "volume": 7760,
+     "cpc": 0.12,
+     "estimated_value": 50
+    },
+    {
+     "name": "size of downlight",
+     "volume": 440,
+     "cpc": 0,
+     "estimated_value": 40
+    }
+   ],
+   "top_regions": [
+    {
+     "country": "US",
+     "name": "United States",
+     "share": 0.2787
+    },
+    {
+     "country": "NG",
+     "name": "Nigeria",
+     "share": 0.1709
+    },
+    {
+     "country": "IN",
+     "name": "India",
+     "share": 0.1545
+    },
+    {
+     "country": "PH",
+     "name": "Philippines",
+     "share": 0.0809
+    },
+    {
+     "country": "AE",
+     "name": "United Arab Emirates",
+     "share": 0.0607
+    }
+   ],
+   "ai_traffic": null
+  },
+  "backlinks": {
+   "domain": "grnled.com",
+   "overview": {
+    "domain_rating": 46,
+    "backlinks": 8030,
+    "referring_domains": 1467,
+    "dofollow_backlinks_pct": 54,
+    "dofollow_referring_domains_pct": 65
+   },
+   "backlinks": [
+    {
+     "from_url": "https://manipureducation.gov.in/schemes/",
+     "to_url": "https://grnled.com/best-led-panel-light-manufacturer-in-china/2x2-led-panel-light",
+     "title": "Schemes – Department of Education (S) – Government of Manipur",
+     "anchor": "2x2 led panels",
+     "domain_rating": 41
+    },
+    {
+     "from_url": "https://www.suzette-et-moi.fr/blog-couture/tuto-couture-debutant/tuto-couture-trousse-a-fermeture-eclair/",
+     "to_url": "https://grnled.com/magnetic-track-lights",
+     "title": "Tuto couture trousse à fermeture éclair - Suzette et Moi",
+     "anchor": "China magnetic track lights",
+     "domain_rating": 6
+    },
+    {
+     "from_url": "https://www.ilgazzettinometropolitano.it/2022/07/13/milano-automa-settala/",
+     "to_url": "https://grnled.com/led-flood-lights-manufacturer/smd-led-floodlight",
+     "title": "Milano, l’Automa Settala protagonista della 23esima Esposizione internazionale",
+     "anchor": "low voltage street light",
+     "domain_rating": 27
+    },
+    {
+     "from_url": "https://gopeta.com/ar/%D9%85%D9%82%D8%A7%D8%B3%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D8%A8%D9%88%D8%AA-%D9%84%D8%A7%D9%8A%D8%AA/",
+     "to_url": "https://grnled.com/blog/led-downlight-cutout-size-guide.html",
+     "title": "مقاسات السبوت لايت ليد | افضل مقاسات السبوتات في السقف",
+     "anchor": "GRNLED",
+     "domain_rating": 3
+    },
+    {
+     "from_url": "https://www.ledyilighting.com/led-lighting-manufacturers-in-china/",
+     "to_url": "https://grnled.com/",
+     "title": "Top 40 LED Lighting Manufacturers In China (2026) - LEDYi Lighting",
+     "anchor": "Greenriy Technology",
+     "domain_rating": 46
+    },
+    {
+     "from_url": "https://www.brecolightsnigeria.com/",
+     "to_url": "https://grnled.com/",
+     "title": "Eurolight - Best LED Light Supplier & manufacturer in Nigeria",
+     "anchor": "GRNLED",
+     "domain_rating": 4
+    },
+    {
+     "from_url": "https://grokipedia.com/page/Batten",
+     "to_url": "https://grnled.com/led-batten-lights/led-t8-batten.html",
+     "title": "Batten — Grokipedia",
+     "anchor": "LED T8 Batten - GRNLED",
+     "domain_rating": 78
+    },
+    {
+     "from_url": "https://upwardlighting.com/how-to-specify-commercial-led-downlights-cutout-beam-angle-ugr-glare-cct-cri/",
+     "to_url": "https://grnled.com/blog/led-downlight-cutout-size-guide.html",
+     "title": "How to Specify Commercial LED Downlights: Cutout, Beam Angle, UGR, CCT & CRI",
+     "anchor": "cutout diameter",
+     "domain_rating": 17
+    },
+    {
+     "from_url": "https://szledworld.com/flexible-led-screen",
+     "to_url": "https://grnled.com/contact-us",
+     "title": "Flexible LED Screen manufacturer in china - SZLEDWORLD",
+     "anchor": "",
+     "domain_rating": 34
+    },
+    {
+     "from_url": "http://afc.blog.free.fr/index.php?post/2010/03/15/ouverture-du-site-de-l-Association-Fran%C3%A7aise-des-Catalanistes",
+     "to_url": "https://grnled.com/best-led-down-lights-manufacturer-in-china/tilt-adjustable-downlight",
+     "title": "ouverture du site de l'Association Française des Catalanistes - Association Française des Catalanistes",
+     "anchor": "90mm cut out downlight",
+     "domain_rating": 91
+    },
+    {
+     "from_url": "https://ya.ru/neurum/t/Lighting",
+     "to_url": "https://grnled.com/blog/what-are-the-differences-between-spotlights-and-downlights.html",
+     "title": "Lighting - Вопросы к Поиску с Алисой Яндекс",
+     "anchor": "grnled.com",
+     "domain_rating": 89
+    },
+    {
+     "from_url": "https://www.rrrlighting.com/blog/best-color-temperature-for-flood-lights/",
+     "to_url": "https://grnled.com/blog/how-to-choose-the-color-temperature-of-led-lights.html",
+     "title": "What is the Best Color Temperature for Flood Lights? - Leading LED Flood Light Manufacturer and Supplier, Led Ceiling Downlights, Germicidal UV Light",
+     "anchor": "How to choose the color temperature of LED lights - GRNLED",
+     "domain_rating": 4
+    },
+    {
+     "from_url": "https://www.mairie-bassac.fr/Le_Journal/index.php?post/2015/07/11/Nuits-Romanes",
+     "to_url": "https://grnled.com/led-high-bay-lights/warehouse-high-bay",
+     "title": "Nuits Romanes - Le petit Journal de Bassac",
+     "anchor": "dimmable high bay lighting",
+     "domain_rating": 7
+    },
+    {
+     "from_url": "https://www.ppsgr.com/post/invisible-unit-renovations-for-tenant-retention/",
+     "to_url": "https://grnled.com/blog/3000k-vs-4000k-led-light-how-to-choose.html",
+     "title": "Invisible Unit Renovations for Tenant Retention",
+     "anchor": "for 3000K or 4000K LEDs",
+     "domain_rating": 8
+    },
+    {
+     "from_url": "https://goldmore.com/led-lighting-manufacturers-in-china/",
+     "to_url": "https://grnled.com/",
+     "title": "Top 10 LED Lighting Manufacturers in China (2024 List)",
+     "anchor": "https://grnled.com/",
+     "domain_rating": 10
+    },
+    {
+     "from_url": "https://quintessentialoffices.co.uk/insights/make-your-office-more-welcoming-for-clients",
+     "to_url": "https://grnled.com/blog/how-to-optimize-your-office-lighting-for-maximum-productivity-and-comfort.html",
+     "title": "8 Easy Ways to Make Your Office More Welcoming for Clients | Quintessential Offices",
+     "anchor": "artificial lighting",
+     "domain_rating": 23
+    },
+    {
+     "from_url": "https://www.chz-lighting.com/blog/led-football-field-lighting-design-and-implementation-guide.html",
+     "to_url": "https://grnled.com/blog/football-field-lighting-design-stadium-light-factory.html",
+     "title": "LED Football Field Lighting Design and Implementation Guide | CHZ Lighting",
+     "anchor": "Source",
+     "domain_rating": 23
+    },
+    {
+     "from_url": "https://lightrixtech.com/how-to-light-different-jewelry-types-diamond-pearl-gold-silver-in-one-case/",
+     "to_url": "https://grnled.com/blog/what-is-a-magnetic-track-lighting-system.html",
+     "title": "How to Light Different Jewelry Types (Diamond, Pearl, Gold, Silver) in One Case - lightrixtech.com",
+     "anchor": "https://grnled.com/blog/what-is-a-magnetic-track-lighting-system.html",
+     "domain_rating": 1
+    },
+    {
+     "from_url": "https://mf.eukallos.edu.ba/k-o-n-k-u-r-s-za-upis-studenata-na-evropski-univerzitet-kallos-tuzla-u-skolskoj-2018-19-godini/",
+     "to_url": "https://grnled.com/led-flood-lights-manufacturer/stadium-floodlights",
+     "title": "K O N K U R S za upis studenata na Evropski univerzitet „Kallos“ Tuzla u školskoj 2018/19. godini – Medicinski fakultet",
+     "anchor": "1000w floodlight",
+     "domain_rating": 23
+    },
+    {
+     "from_url": "https://fariaraima.godaddysites.com/tri-proof-led-light",
+     "to_url": "https://grnled.com/blog/everything-about-led-tri-proof-light-you-need-to-know.html",
+     "title": "Tri Proof Led Light | Faria Raima",
+     "anchor": "Tri Proof Led Light",
+     "domain_rating": 88
+    }
+   ]
+  }
+ },
+ "tendalighting.com": {
+  "traffic": {
+   "domain": "tendalighting.com",
+   "title": "Pendant Spotlight, Linear Track Lighting, Ceiling Light - TENDA",
+   "description": "MOUNTING\n\n\nMounting location\non Track\n\n\nType\n4wires/3wires/2wires\n\n\nELECTRICAL\n\n\nInput Voltage\nAC220-240V/AC100-240V\n\n\nFrequency\n50/60HZ\n\n\nDRIVER\n\n\nDriver Type\nBuilt-in/integrated\n\n\nDriver Brand\nTridonic/Power gear/Osram/HEP\n\n\nDimming Option\nNon-dim/TRIAC/0-10V(Dim on board)/DALI/TUYA\n\n\nLED\n\n\n...",
+   "overview": {
+    "global_rank": null,
+    "country_rank": null,
+    "visits": 0,
+    "bounce_rate": 0,
+    "pages_per_visit": 0,
+    "time_on_site_seconds": 0,
+    "month": "2026-06"
+   },
+   "monthly_visits": [
+    {
+     "month": "2026-04",
+     "visits": 65
+    },
+    {
+     "month": "2026-05",
+     "visits": 88
+    },
+    {
+     "month": "2026-06",
+     "visits": 0
+    }
+   ],
+   "traffic_sources": {
+    "direct": 0,
+    "search": 0,
+    "search_organic": 0,
+    "search_paid": 0,
+    "social": 0,
+    "social_organic": 0,
+    "social_paid": 0,
+    "referrals": 0,
+    "paid_referrals": 0,
+    "mail": 0,
+    "gen_ai": 0,
+    "affiliate": 0,
+    "other": 0
+   },
+   "top_keywords": [
+    {
+     "name": "guangdong tenda lighting co",
+     "volume": 80,
+     "cpc": 0,
+     "estimated_value": 80
+    },
+    {
+     "name": "dentas lighting co.ltd.",
+     "volume": 10,
+     "cpc": 0,
+     "estimated_value": 10
+    },
+    {
+     "name": "track lighting thailand factory",
+     "volume": 260,
+     "cpc": 0,
+     "estimated_value": 0
+    },
+    {
+     "name": "intertek ac 220v",
+     "volume": 230,
+     "cpc": 0,
+     "estimated_value": 0
+    },
+    {
+     "name": "diffuser general",
+     "volume": 200,
+     "cpc": 0,
+     "estimated_value": 0
+    }
+   ],
+   "top_regions": [],
+   "ai_traffic": null
+  },
+  "backlinks": {
+   "domain": "tendalighting.com",
+   "overview": {
+    "domain_rating": 9,
+    "backlinks": 1212,
+    "referring_domains": 541,
+    "dofollow_backlinks_pct": 70,
+    "dofollow_referring_domains_pct": 35
+   },
+   "backlinks": [
+    {
+     "from_url": "https://casambi.com/partner-directory/",
+     "to_url": "https://www.tendalighting.com/",
+     "title": "Partner directory Archive - Casambi",
+     "anchor": "Tenda Lighting",
+     "domain_rating": 69
+    },
+    {
+     "from_url": "https://design.museaward.com/winners-info.php?id=19669",
+     "to_url": "https://www.tendalighting.com/",
+     "title": "Residential - Murray Breeze",
+     "anchor": "",
+     "domain_rating": 77
+    },
+    {
+     "from_url": "https://www.xuhandetection.es/products/universal-36w-12v-2a-2-5a-3un-adaptador-de-alimentacion-de-escritorio-con-ce-ul-certificados-fcc/",
+     "to_url": "https://www.tendalighting.com/modern-track-light/",
+     "title": "Adaptador De Alimentación Universal 36W 12V De Fábrica Con Certificados CE/UL/FCC",
+     "anchor": "Modern Track Light",
+     "domain_rating": 0
+    },
+    {
+     "from_url": "https://www.archify.com/hk/product/tenda-lighting/updates/detail/dali-control-digital-addressable-lighting-lnterface",
+     "to_url": "https://www.tendalighting.com/news/dali-contorl-digital-addressable-lighting-lnterface",
+     "title": "DALI Control - Digital Addressable Lighting lnterface - Archify Hongkong",
+     "anchor": "",
+     "domain_rating": 66
+    },
+    {
+     "from_url": "https://www.7colorstek.com/minimalist-track-lighting-guide-in-depth/",
+     "to_url": "http://www.tendalighting.com/",
+     "title": "Transform Your Space with Minimalist Track Lighting",
+     "anchor": "www.tendalighting.com",
+     "domain_rating": 9
+    },
+    {
+     "from_url": "https://www.iron-bindi.es/products/cnbm-revestido-de-cemento-de-hierro-fundido-d-ctil/",
+     "to_url": "https://www.tendalighting.com/led-track-lighting-fixtures/",
+     "title": "Tubos De Hierro Fundido Dúctil Revestidos De Cemento Cnbm Clase K9",
+     "anchor": "Led Track Lighting Fixtures",
+     "domain_rating": 1
+    },
+    {
+     "from_url": "https://www.mediclaco.com/products/waterproof-shoe-cover-new-promotion-hot-style-non-slip/",
+     "to_url": "https://www.tendalighting.com/retail-track-lighting/",
+     "title": "Waterproof Shoe Cover New Promotion 2021 Hot Selling Non-slip Silicone Waterproof Rain Shoe Cover",
+     "anchor": "Retail Track Lighting",
+     "domain_rating": 1
+    },
+    {
+     "from_url": "https://www.secoforklift.com/products/1-6-ton-1-8-ton-2-ton-2-stage-3-stage-mast-three-wheel-electric-forklift/",
+     "to_url": "https://www.tendalighting.com/commercial-track-lighting-led/",
+     "title": "1.6 Tons 1.8 Tons 2 Tons Level 2 Level 3 Mast Three Wheel Electric Forklift",
+     "anchor": "Commercial Track Lighting Led",
+     "domain_rating": 1
+    },
+    {
+     "from_url": "https://www.huifiltern.com/blog/a-to-z-of-sustainable-textiles/",
+     "to_url": "https://www.tendalighting.com/3-light-led-directional-track-lighting-fixture/",
+     "title": "A To Z Of Sustainable Textiles |",
+     "anchor": "3-Light Led Directional Track Lighting Fixture",
+     "domain_rating": 1
+    },
+    {
+     "from_url": "https://www.chenyicarbon.it/set-di-grafite/",
+     "to_url": "https://www.tendalighting.com/spotlight-flush-mount/",
+     "title": "Set di grafite - Produttori, Fornitori, Fabbrica da",
+     "anchor": "Spotlight Flush Mount",
+     "domain_rating": 1
+    },
+    {
+     "from_url": "https://www.lalbabyco.com/blog/hands-on-review:-htvront-vinyl-heat-press/",
+     "to_url": "https://www.tendalighting.com/track-spotlight/",
+     "title": "Hands-on Review: HTVRONT Vinyl Heat Press",
+     "anchor": "Track Spotlight",
+     "domain_rating": 1
+    },
+    {
+     "from_url": "http://photos.wtravelfrance.com/blog/ppne-xiaomi-mijia-magnetic-track-light-has-just-arrived-notebookchecknet-news/",
+     "to_url": "https://www.tendalighting.com/linear-track-lighting/",
+     "title": "Xiaomi Mijia Magnetic Track Light has just arrived - NotebookCheck.net News",
+     "anchor": "Linear Track Lighting",
+     "domain_rating": 21
+    },
+    {
+     "from_url": "https://www.ledpan.com/thread-3178-1-1.html",
+     "to_url": "http://www.tendalighting.com/sitemap.aspx",
+     "title": "LED业务员分享东亚中国香港LED indoor lighting室内灯具照明网站 - LED询盘邮箱分享 LED盘照明灯具翩日科技-LED论坛|中国LED照明外贸论坛",
+     "anchor": "http://www.tendalighting.com/sitemap.aspx",
+     "domain_rating": 0
+    },
+    {
+     "from_url": "https://www.treadmill-shoan.it/products/isolatore-sospensione-montante-220kv-per-isolatore-perno-trasmissione-polimero/",
+     "to_url": "https://www.tendalighting.com/led-wall-track-lighting/",
+     "title": "Isolatore Della Sospensione Dell&#39;albero 220kv Per Il Pin Della Trasmissione/isolatore Del Polimero",
+     "anchor": "Led Wall Track Lighting",
+     "domain_rating": 1
+    },
+    {
+     "from_url": "https://www.shrimpstudio.it/products/steel-frame-modular-home-design/",
+     "to_url": "https://www.tendalighting.com/track-lighting-modern/",
+     "title": "Steel Frame Modular Home Design",
+     "anchor": "Track Lighting Modern",
+     "domain_rating": 1
+    },
+    {
+     "from_url": "https://www.frsnonwovenfabric.com/products/595*595*600mm-g4-efficiency-nonwoven-pocket-filter-bags-for-hvac-system/",
+     "to_url": "https://www.tendalighting.com/ceiling-recessed-spotlights/",
+     "title": "595*595*600mm G4 High Efficiency Non Woven Bag Filter Bag For HVAC System",
+     "anchor": "Ceiling Recessed Spotlights",
+     "domain_rating": 1
+    },
+    {
+     "from_url": "https://www.zenqiclothesshop.it/giacca-in-pelle/page-2/",
+     "to_url": "https://www.tendalighting.com/ceiling-mount-track-lighting-kits/",
+     "title": "Giacca in pelle di qualità dalla Cina - Produttore, fornitore, fabbrica affidabile",
+     "anchor": "Ceiling Mount Track Lighting Kits",
+     "domain_rating": 0
+    },
+    {
+     "from_url": "https://www.buildmtrco.com/blog/the-best-dumbbells-to-buy-online-according-to-a/",
+     "to_url": "https://www.tendalighting.com/track-lighting-supplies/",
+     "title": "The Best Dumbbells To Buy Online, According To A Fitness Director |",
+     "anchor": "Track Lighting Supplies",
+     "domain_rating": 1
+    },
+    {
+     "from_url": "https://www.theinterceptor.it/news/trucker-protest-shuts-down-port-of-oakland/",
+     "to_url": "https://www.tendalighting.com/modern-track-lighting-systems/",
+     "title": "Trucker Protest Shuts Down Port Of Oakland |",
+     "anchor": "Modern Track Lighting Systems",
+     "domain_rating": 1
+    },
+    {
+     "from_url": "https://www.bilesbabysupply.es/banera-para-bebes/page-2/",
+     "to_url": "https://www.tendalighting.com/110v-led-spotlight/",
+     "title": "Fabricante chino de bañeras para bebés: proveedor y fábrica de calidad",
+     "anchor": "110v Led Spotlight",
+     "domain_rating": 0
+    }
+   ]
+  }
+ },
+ "waclighting.com": {
+  "traffic": {
+   "domain": "waclighting.com",
+   "title": "LED Lighting Manufacturer | Energy-Efficient | WAC Lighting",
+   "description": "Front Page",
+   "overview": {
+    "global_rank": 207694,
+    "country_rank": {
+     "country": "US",
+     "rank": 48131
+    },
+    "visits": 140953,
+    "bounce_rate": 0.340527271071231,
+    "pages_per_visit": 5.766402237306555,
+    "time_on_site_seconds": 186.58478411464804,
+    "month": "2026-06"
+   },
+   "monthly_visits": [
+    {
+     "month": "2026-04",
+     "visits": 121524
+    },
+    {
+     "month": "2026-05",
+     "visits": 149688
+    },
+    {
+     "month": "2026-06",
+     "visits": 140953
+    }
+   ],
+   "traffic_sources": {
+    "direct": 0.387,
+    "search": 0.5061,
+    "search_organic": 0.4607,
+    "search_paid": 0.0454,
+    "social": 0.0176,
+    "social_organic": 0.0175,
+    "social_paid": 0.0001,
+    "referrals": 0.0491,
+    "paid_referrals": 0.0015,
+    "mail": 0.0206,
+    "gen_ai": 0.018,
+    "affiliate": 0,
+    "other": 0
+   },
+   "top_keywords": [
+    {
+     "name": "wac lighting",
+     "volume": 9800,
+     "cpc": 0.86,
+     "estimated_value": 5770
+    },
+    {
+     "name": "wac",
+     "volume": 21040,
+     "cpc": 0.96,
+     "estimated_value": 500
+    },
+    {
+     "name": "led-3f27",
+     "volume": 540,
+     "cpc": 0,
+     "estimated_value": 350
+    },
+    {
+     "name": "square  black deck light",
+     "volume": 670,
+     "cpc": 0,
+     "estimated_value": 320
+    },
+    {
+     "name": "wac fm-11rn",
+     "volume": 390,
+     "cpc": 0,
+     "estimated_value": 320
+    }
+   ],
+   "top_regions": [
+    {
+     "country": "US",
+     "name": "United States",
+     "share": 0.8709
+    },
+    {
+     "country": "CA",
+     "name": "Canada",
+     "share": 0.051
+    },
+    {
+     "country": "PH",
+     "name": "Philippines",
+     "share": 0.0078
+    },
+    {
+     "country": "VN",
+     "name": "Vietnam",
+     "share": 0.0076
+    },
+    {
+     "country": "IN",
+     "name": "India",
+     "share": 0.0064
+    }
+   ],
+   "ai_traffic": {
+    "trends": [
+     {
+      "name": "gemini.google.com",
+      "history": [
+       {
+        "date": "2026-06-01",
+        "value": 4.229114982266345
+       },
+       {
+        "date": "2026-05-01",
+        "value": 0
+       },
+       {
+        "date": "2026-04-01",
+        "value": 0
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "backlinks": {
+   "domain": "waclighting.com",
+   "overview": {
+    "domain_rating": 71,
+    "backlinks": 234646,
+    "referring_domains": 4417,
+    "dofollow_backlinks_pct": 99,
+    "dofollow_referring_domains_pct": 83
+   },
+   "backlinks": [
+    {
+     "from_url": "https://waclightinglights.com/wac/category/lighting/ceiling-lights/track-lighting/",
+     "to_url": "https://www.waclighting.com/",
+     "title": "WAC Lighting Track Lighting",
+     "anchor": "Visit WAC Lighting's website",
+     "domain_rating": 22
+    },
+    {
+     "from_url": "https://schonbek.com/",
+     "to_url": "https://www.waclighting.com/tradeprogram",
+     "title": "Luxury Crystal Chandeliers and Lighting | Schonbek",
+     "anchor": "LEARN MORE",
+     "domain_rating": 47
+    },
+    {
+     "from_url": "https://midtownelectric.com/",
+     "to_url": "https://www.waclighting.com/",
+     "title": "Midtown Electric Supply",
+     "anchor": "",
+     "domain_rating": 0
+    },
+    {
+     "from_url": "https://www.winglesupply.com/",
+     "to_url": "https://www.waclighting.com/",
+     "title": "Hardscape Supply | Wood Pellets | Ice Melt | Rentals | Wingle Supply Co. - New Jersey",
+     "anchor": "WAC Lighting Supplier",
+     "domain_rating": 8
+    },
+    {
+     "from_url": "https://rdstudio.co/blogs/news/free-lighting-families-top-brands",
+     "to_url": "https://waclighting.com/product-category/ceiling/indoor-pendants/page/2/",
+     "title": "20 Top Lighting Brands with Free Revit Families [Tested by RD Studio]",
+     "anchor": "WAC Lighting - Preview of Revit lighting family",
+     "domain_rating": 8
+    },
+    {
+     "from_url": "https://gardensatlakemerritt.org/autumn-lights-festival-2025/",
+     "to_url": "https://waclighting.com/category-landing/landscape-3/",
+     "title": "Autumn Lights Festival 2025 - The Gardens at Lake Merritt",
+     "anchor": "",
+     "domain_rating": 40
+    },
+    {
+     "from_url": "https://canadalightshop.ca/blogs/resources/lights-and-tracks-guide",
+     "to_url": "https://www.waclighting.com/",
+     "title": "Lights and Tracks: Everything You Need to Know – Canada Light Shop",
+     "anchor": "WAC Lighting",
+     "domain_rating": 4
+    },
+    {
+     "from_url": "https://cpsdistributors.com/landscape-lighting-supply-in-colorado-and-wyoming-cps-distributors/",
+     "to_url": "https://waclighting.com/category-landing/landscape-3/",
+     "title": "Landscape Lighting Supply for Professionals in Colorado and Wyoming",
+     "anchor": "WAC Landscape Lighting",
+     "domain_rating": 39
+    },
+    {
+     "from_url": "https://dutchbarnlandscaping.com/",
+     "to_url": "https://www.waclighting.com/",
+     "title": "Home - Dutch Barn Landscaping & Pools",
+     "anchor": "WacLogo-600x139",
+     "domain_rating": 2
+    },
+    {
+     "from_url": "https://cocotothetrade.com/vendor-list/",
+     "to_url": "https://www.waclighting.com/",
+     "title": "Full To-the-Trade Vendors List — Coco to the Trade",
+     "anchor": "WAC Lighting",
+     "domain_rating": 5
+    },
+    {
+     "from_url": "https://www.wattsaverlighting.com/",
+     "to_url": "https://www.waclighting.com/",
+     "title": "Wattsaver Lighting Products Inc | Lighting and Electrical Distributor",
+     "anchor": "WAC LIGHTING.png",
+     "domain_rating": 18
+    },
+    {
+     "from_url": "https://www.lutou-tech.com/top-10-landscape-lighting-manufacturers-2025/",
+     "to_url": "https://www.waclighting.com/",
+     "title": "Top 10 Landscape Lighting Manufacturers 2026 | LT Tech OEM",
+     "anchor": "https://www.waclighting.com/",
+     "domain_rating": 9
+    },
+    {
+     "from_url": "https://detailslightinginc.com/",
+     "to_url": "http://www.waclighting.com/",
+     "title": "Details Lighting – Philadelphia Lighting Store",
+     "anchor": "WAC Lighting",
+     "domain_rating": 15
+    },
+    {
+     "from_url": "https://www.htwatlanta.com/",
+     "to_url": "https://www.waclighting.com/",
+     "title": "Home TheaterWorks | Custom Installation of Home Automation Systems",
+     "anchor": "",
+     "domain_rating": 5
+    },
+    {
+     "from_url": "https://www.douglaslandscaping.com/",
+     "to_url": "https://waclighting.com/literature/2025-wac-landscape-lighting-catalog/",
+     "title": "Home | Douglas Landscaping | Landscape Design",
+     "anchor": "Nighttime landscape with colorful lights illuminating trees and a path leading to a modern home.",
+     "domain_rating": 17
+    },
+    {
+     "from_url": "https://bostonautomations.com/",
+     "to_url": "https://www.waclighting.com/",
+     "title": "Boston Automations",
+     "anchor": "",
+     "domain_rating": 25
+    },
+    {
+     "from_url": "https://www.lightloft.ca/",
+     "to_url": "https://www.waclighting.com/",
+     "title": "Lighting | Light Loft | Ontario",
+     "anchor": "download.png",
+     "domain_rating": 1
+    },
+    {
+     "from_url": "https://waveelectric.us/",
+     "to_url": "http://www.waclighting.com/solution/2171",
+     "title": "Wave Electric Inc. | St Charles, IL Electrican",
+     "anchor": "wac lighting",
+     "domain_rating": 0
+    },
+    {
+     "from_url": "https://play.google.com/store/apps/details?id=com.WAC.PlayStore.WACSmartFans&hl=en_US",
+     "to_url": "https://www.waclighting.com/privacy/",
+     "title": "WAC Smart Fans - Apps on Google Play",
+     "anchor": "shieldPrivacy Policy",
+     "domain_rating": 99
+    },
+    {
+     "from_url": "https://forums.mikeholt.com/threads/kitchen-under-cabinet-lighting.2579996/",
+     "to_url": "https://www.waclighting.com/product/duo-ac-led-color-option-light-bars/",
+     "title": "Kitchen Under Cabinet Lighting | Information by Electrical Professionals for Electrical Professionals",
+     "anchor": "DUO AC-LED Color Option Light Bars | WAC Lighting",
+     "domain_rating": 65
+    }
+   ]
+  }
+ }
+}

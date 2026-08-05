@@ -5,11 +5,27 @@ import Features2 from '~/components/widgets/Features2.astro';
 import ProductGallery from '~/components/ProductGallery.astro';
 
 const metadata = {
-  title: 'Track Lighting Manufacturer — LED Track Lights | ENCORE',
+  title: 'LED Track Lighting Manufacturer & Supplier',
+  description:
+    'Track lighting manufacturer producing LED track systems for retail, museums and commercial spaces. OEM/ODM available, ETL/CE/ISO certified factory since 2011.',
+};
+const breadcrumbJson = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://astrowindwopress.vercel.app/' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Track Lighting',
+      item: 'https://astrowindwopress.vercel.app/products/track-lighting',
+    },
+  ],
 };
 ---
 
 <Layout metadata={metadata}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJson)} />
   <Content
     tagline="Products"
     title="LED Track Lighting Manufacturer"
@@ -56,20 +72,40 @@ const metadata = {
     <ProductGallery
       images={[
         { src: '/images/products/prod-ovega-web-01.jpg', alt: 'OVEGA Track Light', title: 'OVEGA Track Light' },
-        { src: '/images/products/prod-ovega-web-02.jpg', alt: 'OVEGA Track Light Side View', title: 'OVEGA — Side View' },
+        {
+          src: '/images/products/prod-ovega-web-02.jpg',
+          alt: 'OVEGA Track Light Side View',
+          title: 'OVEGA — Side View',
+        },
         { src: '/images/products/prod-ovega-web-03.jpg', alt: 'OVEGA Track Light Detail', title: 'OVEGA — Detail' },
-        { src: '/images/products/prod-ovega-web-04.jpg', alt: 'OVEGA Track Light Installation', title: 'OVEGA — Installation' },
+        {
+          src: '/images/products/prod-ovega-web-04.jpg',
+          alt: 'OVEGA Track Light Installation',
+          title: 'OVEGA — Installation',
+        },
         { src: '/images/products/prod-vega-s.jpg', alt: 'VEGA Track Light', title: 'VEGA Track Light' },
         { src: '/images/products/prod-vega-standard.jpg', alt: 'VEGA Standard Track Light', title: 'VEGA — Standard' },
-        { src: '/images/products/prod-vega-projector.jpg', alt: 'VEGA Projector Track Light', title: 'VEGA — Projector' },
+        {
+          src: '/images/products/prod-vega-projector.jpg',
+          alt: 'VEGA Projector Track Light',
+          title: 'VEGA — Projector',
+        },
         { src: '/images/products/prod-vega-zoomable.jpg', alt: 'VEGA Zoomable Track Light', title: 'VEGA — Zoomable' },
         { src: '/images/products/prod-flex-web-01.jpg', alt: 'FLEX Track Light', title: 'FLEX Track Light' },
         { src: '/images/products/prod-flex-web-02.jpg', alt: 'FLEX Track Light Angle', title: 'FLEX — Angle View' },
         { src: '/images/products/prod-flex-web-03.jpg', alt: 'FLEX Track Light Detail', title: 'FLEX — Detail' },
-        { src: '/images/products/prod-flex-web-04.jpg', alt: 'FLEX Track Light Application', title: 'FLEX — Application' },
+        {
+          src: '/images/products/prod-flex-web-04.jpg',
+          alt: 'FLEX Track Light Application',
+          title: 'FLEX — Application',
+        },
         { src: '/images/products/prod-imax-standard.jpg', alt: 'IMAX Track Light', title: 'IMAX Track Light' },
         { src: '/images/products/prod-imax-white.png', alt: 'IMAX Track Light White', title: 'IMAX — White Series' },
-        { src: '/images/products/prod-imax-projector.jpg', alt: 'IMAX Projector Track Light', title: 'IMAX — Projector' },
+        {
+          src: '/images/products/prod-imax-projector.jpg',
+          alt: 'IMAX Projector Track Light',
+          title: 'IMAX — Projector',
+        },
         { src: '/images/products/prod-imax-zoomable.jpg', alt: 'IMAX Zoomable Track Light', title: 'IMAX — Zoomable' },
       ]}
     />

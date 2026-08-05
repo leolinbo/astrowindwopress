@@ -6,6 +6,7 @@ export default {
   tabWidth: 2,
   trailingComma: 'es5',
   useTabs: false,
+  endOfLine: 'auto',
 
   plugins: ['prettier-plugin-astro'],
 

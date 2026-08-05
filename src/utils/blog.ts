@@ -1,211 +1,87 @@
 import type { PaginateFunction } from 'astro';
+import { getCollection, render } from 'astro:content';
 import type { Post, Taxonomy, MetaData } from '~/types';
 import { APP_BLOG } from 'astrowind:config';
 import { cleanSlug, trimSlash, BLOG_BASE, POST_PERMALINK_PATTERN, CATEGORY_BASE, TAG_BASE } from './permalinks';
 
 // ---------------------------------------------------------------------------
-// WordPress REST API types
+// Local content collection blog (no external CMS dependency).
+// Posts live as Markdown/MDX files in src/data/post/ and are rendered at
+// build time by Astro. All exported helpers keep the same API as before so
+// every page and component keeps working without changes.
 // ---------------------------------------------------------------------------
-
-interface WpTitle {
-  rendered: string;
-}
-
-interface WpContent {
-  rendered: string;
-}
-
-interface WpRendered {
-  rendered: string;
-}
-
-interface WpMediaSize {
-  source_url: string;
-  width: number;
-  height: number;
-}
-
-interface WpMediaDetails {
-  sizes: Record<string, WpMediaSize>;
-}
-
-interface WpFeaturedMedia {
-  source_url: string;
-  media_details: WpMediaDetails;
-  alt_text: string;
-}
-
-interface WpTerm {
-  taxonomy: 'category' | 'post_tag';
-  slug: string;
-  name: string;
-}
-
-interface WpAuthor {
-  name: string;
-}
-
-interface WpEmbedded {
-  'wp:term'?: WpTerm[][];
-  'wp:featuredmedia'?: WpFeaturedMedia[];
-  author?: WpAuthor[];
-}
-
-interface WpPost {
-  id: number;
-  slug: string;
-  date: string;
-  modified: string;
-  title: WpTitle;
-  content: WpContent;
-  excerpt: WpRendered;
-  _embedded?: WpEmbedded;
-}
-
-// ---------------------------------------------------------------------------
-// WordPress REST API — replace with your own WordPress site URL
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// WordPress REST API — configure via environment variable or change here
-// ---------------------------------------------------------------------------
-// Set the WP_API_URL env var to your WordPress site's REST API root, e.g.:
-//   WP_API_URL=https://example.com/wp-json/wp/v2 npm run dev
-// If unset, the default URL below is used as a working demo.
-// ---------------------------------------------------------------------------
-const WP_API_BASE: string =
-  import.meta.env.WP_API_URL ?? 'https://whitesmoke-jellyfish-711069.hostingersite.com/wp-json/wp/v2';
-
-/**
- * Fetch all posts from WordPress, including embedded resources (categories,
- * tags, featured media, author) so we can build full Post objects.
- */
-async function fetchWpPosts(): Promise<WpPost[]> {
-  const url = `${WP_API_BASE}/posts?_embed&per_page=100`;
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`WordPress API error: ${res.status} ${res.statusText}`);
-  return res.json();
-}
 
 /**
  * Estimate reading time from plain text (rough: 200 words/min).
  */
-function estimateReadingTime(html: string): number {
-  const text = html.replace(/<[^>]*>/g, '').trim();
-  const words = text.split(/\s+/).filter(Boolean).length;
+function estimateReadingTime(text: string): number {
+  const words = text.trim().split(/\s+/).filter(Boolean).length;
   return Math.max(1, Math.ceil(words / 200));
 }
 
 /**
- * Strip HTML tags from a string, returning clean text.
+ * Normalise a local content-collection entry into our internal Post shape.
  */
-function stripHtml(html: string): string {
-  return html.replace(/<[^>]*>/g, '').trim();
-}
+async function normalizeEntry(entry: Awaited<ReturnType<typeof getCollection>>[number]): Promise<Post> {
+  const { Content } = await render(entry);
 
-/**
- * Normalise a raw WordPress REST API post into our internal Post shape.
- */
-function normalizeWpPost(raw: WpPost): Post {
-  const embed = raw._embedded;
-
-  // ---- category -----------------------------------------------------------
-  const terms = (embed?.['wp:term'] ?? []).flat();
-  const catTerm = terms.find((t) => t.taxonomy === 'category');
-  const category: Taxonomy | undefined = catTerm
-    ? { slug: cleanSlug(catTerm.slug), title: catTerm.name }
+  const category: Taxonomy | undefined = entry.data.category
+    ? { slug: cleanSlug(entry.data.category), title: entry.data.category }
     : undefined;
 
-  // ---- tags ---------------------------------------------------------------
-  const tagTerms = terms.filter((t) => t.taxonomy === 'post_tag');
-  const tags: Taxonomy[] = tagTerms.map((t) => ({
-    slug: cleanSlug(t.slug),
-    title: t.name,
+  const tags: Taxonomy[] = (entry.data.tags ?? []).map((t) => ({
+    slug: cleanSlug(t),
+    title: t,
   }));
 
-  // ---- featured image -----------------------------------------------------
-  const media = (embed?.['wp:featuredmedia'] ?? [])[0];
-  let image: string | undefined;
-  if (media) {
-    const sizes = media.media_details?.sizes ?? {};
-    // Pick medium_large first, then medium, then full, then source_url
-    image =
-      sizes.medium_large?.source_url ??
-      sizes.medium?.source_url ??
-      sizes.full?.source_url ??
-      media.source_url ??
-      undefined;
-  }
+  // Astro 6 content-layer entries expose `id` (the file slug) but no `slug` field.
+  const slug = entry.id;
 
-  // ---- author -------------------------------------------------------------
-  const authorData = (embed?.['author'] ?? [])[0];
-  const author = authorData?.name ?? undefined;
-
-  const slug = cleanSlug(raw.slug);
-  const publishDate = new Date(raw.date);
-  const updateDate = raw.modified ? new Date(raw.modified) : undefined;
-
-  // Build permalink from the same pattern used by local posts
   const permalink = POST_PERMALINK_PATTERN.replace('%slug%', slug)
-    .replace('%id%', String(raw.id))
-    .replace('%category%', category?.slug ?? '')
-    .replace('%year%', String(publishDate.getFullYear()).padStart(4, '0'))
-    .replace('%month%', String(publishDate.getMonth() + 1).padStart(2, '0'))
-    .replace('%day%', String(publishDate.getDate()).padStart(2, '0'))
-    .replace('%hour%', String(publishDate.getHours()).padStart(2, '0'))
-    .replace('%minute%', String(publishDate.getMinutes()).padStart(2, '0'))
-    .replace('%second%', String(publishDate.getSeconds()).padStart(2, '0'));
-
-  const cleanPermalink = permalink
     .split('/')
     .map((el) => trimSlash(el))
     .filter((el) => !!el)
     .join('/');
 
   return {
-    id: String(raw.id),
+    id: entry.id,
     slug,
-    permalink: cleanPermalink,
+    permalink,
 
-    publishDate,
-    updateDate,
+    publishDate: entry.data.publishDate ?? new Date(),
+    updateDate: entry.data.updateDate,
 
-    title: stripHtml(raw.title?.rendered ?? ''),
-    excerpt: stripHtml(raw.excerpt?.rendered ?? ''),
-    image,
+    title: entry.data.title,
+    excerpt: entry.data.excerpt,
+    image: entry.data.image,
 
     category,
     tags,
-    author,
+    author: entry.data.author,
 
-    draft: false,
+    draft: entry.data.draft,
 
-    metadata: {
-      title: stripHtml(raw.title?.rendered ?? ''),
-      description: stripHtml(raw.excerpt?.rendered ?? ''),
-    } as MetaData,
+    metadata: entry.data.metadata as MetaData | undefined,
 
-    Content: raw.content?.rendered ?? '',
+    Content,
 
-    readingTime: estimateReadingTime(raw.content?.rendered ?? ''),
+    readingTime: estimateReadingTime(entry.body),
   };
 }
 
 // ---------------------------------------------------------------------------
-// Caching layer (kept identical to the original pattern)
+// Caching layer
 // ---------------------------------------------------------------------------
-let _posts: Array<Post>;
+let _posts: Array<Post> | undefined;
 
 const load = async (): Promise<Array<Post>> => {
-  const rawPosts = await fetchWpPosts();
-  const normalized = rawPosts
-    .map(normalizeWpPost)
-    .sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf())
-    .filter((post) => !post.draft);
-  return normalized;
+  const entries = await getCollection('post', ({ data }) => !data.draft);
+  const posts = await Promise.all(entries.map(normalizeEntry));
+  return posts.sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf());
 };
 
 // ---------------------------------------------------------------------------
-// Exports — same API as the original so all pages continue working
+// Exports — same API as before so all pages keep working
 // ---------------------------------------------------------------------------
 
 /** */

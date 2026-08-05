@@ -1,0 +1,53 @@
+---
+import { SITE } from 'astrowind:config';
+import logo from '~/assets/images/logo.png';
+
+export interface Props {
+  breadcrumbs?: { name: string; url: string }[];
+}
+
+const { breadcrumbs } = Astro.props;
+const siteUrl: string = (Astro.site ?? new URL(SITE.site)).toString();
+const logoUrl: string = new URL(logo.src, siteUrl).toString();
+
+const socials = [
+  'https://www.linkedin.com/company/37545158/',
+  'https://www.facebook.com/EncoreCommericalLighting',
+  'https://www.instagram.com/encoreledcommerciallighting/',
+  'https://www.youtube.com/@encorecommerciallighting4413',
+];
+
+const organization = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'ENCORE',
+  url: siteUrl,
+  logo: logoUrl,
+  sameAs: socials,
+};
+
+const webSite = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'ENCORE',
+  url: siteUrl,
+};
+
+const breadcrumb =
+  breadcrumbs && breadcrumbs.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumbs.map((b, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: b.name,
+          item: new URL(b.url, siteUrl).toString(),
+        })),
+      }
+    : null;
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(organization)} />
+<script type="application/ld+json" set:html={JSON.stringify(webSite)} />
+{breadcrumb && <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)} />}

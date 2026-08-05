@@ -1,0 +1,226 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-05T11:45:00+08:00",
+  "scope": {
+    "mode": "site_inventory",
+    "targets": ["https://astrowindwopress.vercel.app"],
+    "market": "unknown",
+    "language": "en",
+    "device": "both",
+    "evidence_modes": ["live", "code"]
+  },
+  "coverage": {
+    "discovered": 22,
+    "selected": 22,
+    "fetched": 22,
+    "rendered": 0,
+    "data_backed": 0,
+    "failed": [],
+    "exclusions": ["/rss.xml（feed，非 HTML 页面）"],
+    "limitations": [
+      "Astro 静态站：原始 HTML 即最终内容，未做 JS 渲染对比",
+      "无 GSC/CrUX/日志数据",
+      "lab 性能测试（PSI）当日匿名配额超限未执行"
+    ]
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "category": "structured_data",
+      "issue": "全站 0 条 JSON-LD：无 Organization/WebSite，4 个产品页无 Product/Breadcrumb",
+      "status": "fail",
+      "evidence_level": "observed",
+      "evidence_refs": [{ "kind": "crawl", "ref": "outputs/seo-audit/crawl_data.json", "observed_at": "2026-08-05" }],
+      "impact": "high",
+      "confidence": "high",
+      "recommended_fix": "Layout 全局注入 Organization（name/url/logo/sameAs）+ WebSite；产品页加 BreadcrumbList，参数真实的产品页可加 Product（无价格不加 offers）",
+      "effort": "m",
+      "dependencies": ["config.yaml", "Layout.astro", "产品页模板"],
+      "verification": "Rich Results Test + GSC 增强结果"
+    },
+    {
+      "id": "F2",
+      "category": "on_page",
+      "issue": "9-10 页标题品牌重复：'…| ENCORE — ENCORE' 或 'ENCORE … — ENCORE'（products×4、pricing、oem-odm、quality-control、certifications、services、about、contact）",
+      "status": "fail",
+      "evidence_level": "observed",
+      "evidence_refs": [{ "kind": "crawl", "ref": "outputs/seo-audit/crawl_data.json" }],
+      "impact": "medium",
+      "confidence": "high",
+      "recommended_fix": "删除页面 frontmatter title 里手写的 '| ENCORE'（模板自动追加 '— ENCORE'），标题唯一化 + 关键词前置",
+      "effort": "xs",
+      "dependencies": ["各页 frontmatter"],
+      "verification": "重新抓取比对 title"
+    },
+    {
+      "id": "F3",
+      "category": "on_page",
+      "issue": "20/21 页共用同一条 183 字符 meta description（全站默认值），snippet 差异化丢失且超显示长度",
+      "status": "fail",
+      "evidence_level": "observed",
+      "evidence_refs": [{ "kind": "crawl", "ref": "outputs/seo-audit/crawl_data.json" }],
+      "impact": "medium",
+      "confidence": "high",
+      "recommended_fix": "每页写 120-160 字符唯一描述（核心卖点+场景+CTA）；config 默认值仅兜底",
+      "effort": "m",
+      "dependencies": ["各页 frontmatter / 文案"],
+      "verification": "抓取复查 description 长度与唯一性"
+    },
+    {
+      "id": "F4",
+      "category": "on_page",
+      "issue": "9 页主标题为 h2 而非 h1（products×4、oem-odm、quality-control、certifications、services、pricing）",
+      "status": "warning",
+      "evidence_level": "observed",
+      "evidence_refs": [{ "kind": "crawl", "ref": "outputs/seo-audit/crawl_data.json" }],
+      "impact": "low",
+      "confidence": "high",
+      "recommended_fix": "Headline 组件主标题改用 h1（AstroWind 支持 tag 属性）",
+      "effort": "xs",
+      "dependencies": ["Headline/WidgetWrapper 组件"],
+      "verification": "复查 DOM h1"
+    },
+    {
+      "id": "F5",
+      "category": "content",
+      "issue": "内容量不足：博客仅 1 篇有效文章 + 1 category + 3 tag 薄页面（21 个可索引 URL）",
+      "status": "warning",
+      "evidence_level": "observed",
+      "evidence_refs": [{ "kind": "crawl", "ref": "outputs/seo-audit/crawl_data.json" }],
+      "impact": "high",
+      "confidence": "high",
+      "recommended_fix": "按选题计划扩博客（track lighting 正名/光束角指南/画廊照明/CRI 白皮书）；tag/category 薄页在内容多起来前可 noindex",
+      "effort": "l",
+      "dependencies": ["产品数据", "GSC 验证搜索需求"],
+      "verification": "GSC 收录/曝光 30 天"
+    },
+    {
+      "id": "F6",
+      "category": "on_page",
+      "issue": "footer 模板残留外链 21 页 × 2：astro.build/blog/astro-6/（'Astro v6 is now available!'）与 github.com/arthelokyo/astrowind（'Made with AstroWind'）",
+      "status": "warning",
+      "evidence_level": "observed",
+      "evidence_refs": [{ "kind": "crawl", "ref": "outputs/seo-audit/crawl_data.json" }],
+      "impact": "low",
+      "confidence": "high",
+      "recommended_fix": "删除模板推广链接，替换为 ENCORE 相关内容/联系链接",
+      "effort": "xs",
+      "dependencies": ["Footer.astro"],
+      "verification": "抓取复查外链"
+    },
+    {
+      "id": "F7",
+      "category": "security",
+      "issue": "缺 X-Content-Type-Options/X-Frame-Options/Referrer-Policy/Permissions-Policy/CSP（HSTS preload ✅）",
+      "status": "warning",
+      "evidence_level": "observed",
+      "evidence_refs": [{ "kind": "http", "ref": "https://astrowindwopress.vercel.app/" }],
+      "impact": "low",
+      "confidence": "high",
+      "recommended_fix": "vercel.json headers 添加基础安全头",
+      "effort": "xs",
+      "dependencies": ["vercel.json"],
+      "verification": "curl -I 复查"
+    },
+    {
+      "id": "F8",
+      "category": "crawl",
+      "issue": "/sitemap.xml 返回 404（robots.txt 声明 sitemap-index.xml 正常）",
+      "status": "warning",
+      "evidence_level": "observed",
+      "evidence_refs": [{ "kind": "http", "ref": "https://astrowindwopress.vercel.app/sitemap.xml" }],
+      "impact": "low",
+      "confidence": "high",
+      "recommended_fix": "vercel.json 将 /sitemap.xml 重定向到 /sitemap-index.xml",
+      "effort": "xs",
+      "dependencies": ["vercel.json"],
+      "verification": "请求复查"
+    },
+    {
+      "id": "F9",
+      "category": "crawl",
+      "issue": "/404 路由返回 200（软 404）；真实不存在 URL 正确返回 404 ✅",
+      "status": "warning",
+      "evidence_level": "observed",
+      "evidence_refs": [{ "kind": "http", "ref": "https://astrowindwopress.vercel.app/404" }],
+      "impact": "low",
+      "confidence": "high",
+      "recommended_fix": "可选：AstroWind 默认行为，影响低，可不处理",
+      "effort": "xs",
+      "dependencies": [],
+      "verification": "复查状态码"
+    },
+    {
+      "id": "F10",
+      "category": "image_search",
+      "issue": "110 张图全有 alt ✅、hero eager ✅、80 张 lazy ✅；44 张 png 可转 webp/avif",
+      "status": "pass",
+      "evidence_level": "observed",
+      "evidence_refs": [{ "kind": "crawl", "ref": "outputs/seo-audit/crawl_data.json" }],
+      "impact": "low",
+      "confidence": "high",
+      "recommended_fix": "后续换图用 webp/avif（可选项）",
+      "effort": "xs",
+      "dependencies": [],
+      "verification": "无需"
+    }
+  ],
+  "action_plan": [
+    {
+      "id": "A1",
+      "finding_ids": ["F1"],
+      "action": "全站结构化数据：Layout 注入 Organization+WebSite，产品页加 BreadcrumbList/Product",
+      "impact": "high",
+      "effort": "m",
+      "owner": "用户（可委托本对话）",
+      "verification": "Rich Results Test"
+    },
+    {
+      "id": "A2",
+      "finding_ids": ["F2", "F3"],
+      "action": "标题去双品牌 + 每页唯一 120-160 字符 description",
+      "impact": "medium",
+      "effort": "m",
+      "owner": "用户（可委托本对话）",
+      "verification": "重新抓取比对"
+    },
+    {
+      "id": "A3",
+      "finding_ids": ["F4"],
+      "action": "9 页主标题 h2→h1",
+      "impact": "low",
+      "effort": "xs",
+      "owner": "用户（可委托本对话）",
+      "verification": "复查 DOM"
+    },
+    {
+      "id": "A4",
+      "finding_ids": ["F6", "F7", "F8"],
+      "action": "清理 footer 模板外链 + vercel.json 安全头 + /sitemap.xml 重定向",
+      "impact": "low",
+      "effort": "s",
+      "owner": "用户（可委托本对话）",
+      "verification": "curl 复查"
+    },
+    {
+      "id": "A5",
+      "finding_ids": ["F5"],
+      "action": "博客内容扩展（按选题计划）",
+      "impact": "high",
+      "effort": "l",
+      "owner": "用户",
+      "verification": "GSC 30 天"
+    }
+  ],
+  "missing_evidence": [
+    "字段级 Core Web Vitals（CrUX/GSC 未绑定；PSI 匿名配额超限）",
+    "GSC 收录/索引覆盖率、搜索词、排名数据",
+    "外链/域名权威数据",
+    "转化/询盘数据"
+  ],
+  "source_review": {
+    "reviewed_at": "2026-08-05",
+    "source_ids": [],
+    "overdue_sources": []
+  }
+}

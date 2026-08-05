@@ -23,6 +23,7 @@ This Privacy Policy describes how Shenzhen Encore Optoelectronic Technology Co.,
 ### Personal Data
 
 When you contact us through our website forms, we may ask you to provide:
+
 - Name
 - Email address
 - Company name
@@ -32,6 +33,7 @@ When you contact us through our website forms, we may ask you to provide:
 ### Usage Data
 
 We may automatically collect information about how you access and use our website, including:
+
 - Your IP address
 - Browser type and version
 - Pages visited and time spent
@@ -41,6 +43,7 @@ We may automatically collect information about how you access and use our websit
 ## How We Use Your Information
 
 We use the collected information to:
+
 - Respond to your inquiries and provide quotations
 - Communicate with you about our products and services
 - Improve our website and user experience
@@ -49,6 +52,7 @@ We use the collected information to:
 ## Data Sharing
 
 We do not sell your personal information. We may share your data with:
+
 - Service providers who assist us in operating our website and business
 - Law enforcement when required by applicable law
 
@@ -59,6 +63,7 @@ We implement reasonable security measures to protect your personal data. However
 ## Your Rights
 
 You have the right to:
+
 - Access your personal data held by us
 - Request correction or deletion of your data
 - Withdraw consent for data processing

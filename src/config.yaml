@@ -11,7 +11,7 @@ metadata:
   title:
     default: ENCORE — Professional LED Track Lighting & Downlight Manufacturer
     template: '%s — ENCORE'
-  description: "Shenzhen Encore Optoelectronic Technology Co., Ltd. is a professional LED track lighting and downlight manufacturer offering OEM/ODM services. ETL/CE/ISO certified factory since 2011."
+  description: 'Professional LED track lighting and downlight manufacturer offering OEM/ODM services. ETL/CE/ISO certified factory since 2011.'
   robots:
     index: true
     follow: true

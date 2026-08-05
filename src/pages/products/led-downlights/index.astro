@@ -4,11 +4,27 @@ import Content from '~/components/widgets/Content.astro';
 import ProductGallery from '~/components/ProductGallery.astro';
 
 const metadata = {
-  title: 'LED Downlight Manufacturer — Recessed Downlights | ENCORE',
+  title: 'LED Downlight Manufacturer & Wholesale Supplier',
+  description:
+    'LED downlight manufacturer and wholesale supplier of recessed downlights for commercial projects. CRI 90+ options with ETL/CE/ISO certified OEM/ODM service.',
+};
+const breadcrumbJson = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://astrowindwopress.vercel.app/' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'LED Downlights',
+      item: 'https://astrowindwopress.vercel.app/products/led-downlights',
+    },
+  ],
 };
 ---
 
 <Layout metadata={metadata}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJson)} />
   <Content
     tagline="Products"
     title="LED Downlight Manufacturer"
@@ -31,8 +47,7 @@ const metadata = {
       },
       {
         title: 'AVA MR16 Modular Downlight System',
-        description:
-          'MR16 compatible modular downlight system for flexible beam angle and lamp replacement options.',
+        description: 'MR16 compatible modular downlight system for flexible beam angle and lamp replacement options.',
       },
     ]}
     image={{
@@ -41,30 +56,42 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Versatile Downlight Solutions
-      </h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Versatile Downlight Solutions</h3>
       From 2-inch mini downlights to high-ceiling commercial solutions.
     </Fragment>
   </Content>
 
   <!-- Product Gallery -->
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-7xl">
-    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-center mb-2 dark:text-white">ELLA Downlight Gallery</h2>
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-center mb-2 dark:text-white">
+      ELLA Downlight Gallery
+    </h2>
     <p class="text-center text-muted dark:text-slate-400 mb-8">Scroll to explore our ELLA downlight collection</p>
     <ProductGallery
       images={[
         { src: '/images/products/prod-ella-web-01.jpg', alt: 'ELLA Downlight', title: 'ELLA Downlight' },
         { src: '/images/products/prod-ella-web-02.jpg', alt: 'ELLA Downlight Front View', title: 'ELLA — Front View' },
         { src: '/images/products/prod-ella-web-03.jpg', alt: 'ELLA Downlight Side View', title: 'ELLA — Side View' },
-        { src: '/images/products/prod-ella-web-05.jpg', alt: 'ELLA Downlight Installation', title: 'ELLA — Installation' },
-        { src: '/images/products/prod-ella-web-06.jpg', alt: 'ELLA Downlight Application', title: 'ELLA — Application' },
+        {
+          src: '/images/products/prod-ella-web-05.jpg',
+          alt: 'ELLA Downlight Installation',
+          title: 'ELLA — Installation',
+        },
+        {
+          src: '/images/products/prod-ella-web-06.jpg',
+          alt: 'ELLA Downlight Application',
+          title: 'ELLA — Application',
+        },
         { src: '/images/products/prod-ella-web-07.jpg', alt: 'ELLA Downlight Close Up', title: 'ELLA — Close Up' },
         { src: '/images/products/prod-ava-01.png', alt: 'AVA MR16 Downlight', title: 'AVA MR16 Downlight' },
         { src: '/images/products/prod-ava-02.png', alt: 'AVA MR16 Downlight 15W', title: 'AVA — 15W Model' },
         { src: '/images/products/prod-ava-showcase.png', alt: 'AVA Downlight Showcase', title: 'AVA — Showcase' },
         { src: '/images/products/prod-galaxy-01.jpg', alt: 'Galaxy Downlight', title: 'Galaxy Downlight' },
-        { src: '/images/products/prod-galaxy-02.jpg', alt: 'Galaxy Downlight Production', title: 'Galaxy — Production' },
+        {
+          src: '/images/products/prod-galaxy-02.jpg',
+          alt: 'Galaxy Downlight Production',
+          title: 'Galaxy — Production',
+        },
         { src: '/images/products/prod-galaxy-03.jpg', alt: 'Galaxy Downlight Angle', title: 'Galaxy — Angle View' },
         { src: '/images/products/prod-della-01.png', alt: 'DELLA Mini Downlight', title: 'DELLA Mini Downlight' },
         { src: '/images/products/prod-della-02.png', alt: 'DELLA Mini Downlight Design', title: 'DELLA — Design' },

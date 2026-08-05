@@ -4,11 +4,27 @@ import Content from '~/components/widgets/Content.astro';
 import ProductGallery from '~/components/ProductGallery.astro';
 
 const metadata = {
-  title: 'Magnetic Track Lighting Manufacturer | ENCORE',
+  title: 'Magnetic Track Lighting System Manufacturer',
+  description:
+    'Magnetic track lighting manufacturer offering slim 5mm, 15mm and 20mm systems for modern interiors. CRI 90+, OEM/ODM and ETL/CE certified factory pricing.',
+};
+const breadcrumbJson = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://astrowindwopress.vercel.app/' },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Magnetic Track Lights',
+      item: 'https://astrowindwopress.vercel.app/products/magnetic-track-lights',
+    },
+  ],
 };
 ---
 
 <Layout metadata={metadata}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJson)} />
   <Content
     tagline="Products"
     title="Magnetic Track Lighting Manufacturer"
@@ -41,9 +57,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        The Future of Track Lighting
-      </h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">The Future of Track Lighting</h3>
       Magnetic connection for effortless installation and reconfiguration.
     </Fragment>
   </Content>
@@ -54,14 +68,42 @@ const metadata = {
     <p class="text-center text-muted dark:text-slate-400 mb-8">Scroll to explore our lighting collection</p>
     <ProductGallery
       images={[
-        { src: '/images/products/prod-magnet-aura-01.png', alt: 'AURA Magnetic Track Light', title: 'AURA Magnetic Light' },
-        { src: '/images/products/prod-magnet-aura-02.png', alt: 'AURA Magnetic Light Angle', title: 'AURA — Angle View' },
-        { src: '/images/products/prod-magnet-disc-01.png', alt: 'DISC Magnetic Track Light', title: 'DISC Magnetic Light' },
+        {
+          src: '/images/products/prod-magnet-aura-01.png',
+          alt: 'AURA Magnetic Track Light',
+          title: 'AURA Magnetic Light',
+        },
+        {
+          src: '/images/products/prod-magnet-aura-02.png',
+          alt: 'AURA Magnetic Light Angle',
+          title: 'AURA — Angle View',
+        },
+        {
+          src: '/images/products/prod-magnet-disc-01.png',
+          alt: 'DISC Magnetic Track Light',
+          title: 'DISC Magnetic Light',
+        },
         { src: '/images/products/prod-magnet-disc-02.png', alt: 'DISC Magnetic Light Detail', title: 'DISC — Detail' },
-        { src: '/images/products/prod-magnet-gridis-01.png', alt: 'GRIDIS Magnetic Light', title: 'GRIDIS Magnetic Light' },
-        { src: '/images/products/prod-magnet-nova-orb.png', alt: 'NOVA Orb Magnetic Light', title: 'NOVA-Orb Magnetic Light' },
-        { src: '/images/products/prod-magnet-nova-cylinder.png', alt: 'NOVA Cylinder Magnetic', title: 'NOVA-Cylinder Magnetic' },
-        { src: '/images/products/prod-magnet-lattice-01.png', alt: 'LATTICE Magnetic Light', title: 'LATTICE Magnetic Light' },
+        {
+          src: '/images/products/prod-magnet-gridis-01.png',
+          alt: 'GRIDIS Magnetic Light',
+          title: 'GRIDIS Magnetic Light',
+        },
+        {
+          src: '/images/products/prod-magnet-nova-orb.png',
+          alt: 'NOVA Orb Magnetic Light',
+          title: 'NOVA-Orb Magnetic Light',
+        },
+        {
+          src: '/images/products/prod-magnet-nova-cylinder.png',
+          alt: 'NOVA Cylinder Magnetic',
+          title: 'NOVA-Cylinder Magnetic',
+        },
+        {
+          src: '/images/products/prod-magnet-lattice-01.png',
+          alt: 'LATTICE Magnetic Light',
+          title: 'LATTICE Magnetic Light',
+        },
       ]}
     />
   </section>
