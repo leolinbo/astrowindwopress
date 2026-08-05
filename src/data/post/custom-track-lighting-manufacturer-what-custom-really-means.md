@@ -38,34 +38,6 @@ _Showroom and consultation space for track lighting and downlight solutions._
 ## The Four Sourcing Models
 
 Once you strip the word “custom” down, a **custom track lighting manufacturer** is really offering one of four models. Knowing which one you need changes your MOQ, your lead time, and who owns the intellectual property.
-
-      ****
-
-
-
-
-
-
-      ****
-
-
-
-
-
-
-      ****
-
-
-
-
-
-
-      ****
-
-
-
-
-
 | Model   | Who designs | Who owns tooling | Best for                                | Main risk                                      |
 | ------- | ----------- | ---------------- | --------------------------------------- | ---------------------------------------------- |
 | OEM     | You         | You (or shared)  | Brands with their own IP and drawings   | High upfront cost; low unit cost only at scale |
