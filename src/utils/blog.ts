@@ -65,7 +65,7 @@ async function normalizeEntry(entry: Awaited<ReturnType<typeof getCollection>>[n
 
     Content,
 
-    readingTime: estimateReadingTime(entry.body),
+    readingTime: estimateReadingTime(entry.body ?? ''),
   };
 }
 
