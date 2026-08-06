@@ -4,7 +4,7 @@ site:
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: false
+  googleSiteVerificationId: 'XMEpt-BTyBz3dKUcAUMdxQt6nLhtpf2WYwokot6OtuA'
 
 # Default SEO metadata
 metadata:
