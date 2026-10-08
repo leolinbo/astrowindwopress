@@ -5,61 +5,26 @@ export const headerData = {
     {
       text: 'Products',
       links: [
-        {
-          text: 'Track Lighting',
-          href: getPermalink('/products/track-lighting'),
-        },
-        {
-          text: 'LED Downlights',
-          href: getPermalink('/products/led-downlights'),
-        },
-        {
-          text: 'Magnetic Track Lights',
-          href: getPermalink('/products/magnetic-track-lights'),
-        },
-        {
-          text: 'Commercial Lighting',
-          href: getPermalink('/products/commercial-lighting'),
-        },
+        { text: 'Track Lighting', href: getPermalink('/products/track-lighting') },
+        { text: 'LED Downlights', href: getPermalink('/products/led-downlights') },
+        { text: 'Magnetic Track Lights', href: getPermalink('/products/magnetic-track-lights') },
+        { text: 'Commercial Lighting', href: getPermalink('/products/commercial-lighting') },
       ],
     },
+    { text: 'OEM / ODM', href: getPermalink('/oem-odm') },
     {
-      text: 'OEM / ODM',
-      href: getPermalink('/oem-odm'),
-    },
-    {
-      text: 'About Us',
+      text: 'About',
       links: [
-        {
-          text: 'Our Factory',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Quality Control',
-          href: getPermalink('/quality-control'),
-        },
-        {
-          text: 'Certifications',
-          href: getPermalink('/certifications'),
-        },
+        { text: 'The Founder', href: getPermalink('/founder') },
+        { text: 'Our Factory', href: getPermalink('/about') },
+        { text: 'Quality Control', href: getPermalink('/quality-control') },
+        { text: 'Certifications', href: getPermalink('/certifications') },
       ],
     },
-    {
-      text: 'Blog',
-      href: getBlogPermalink(),
-    },
-    {
-      text: 'Contact',
-      href: getPermalink('/contact'),
-    },
+    { text: 'Blog', href: getBlogPermalink() },
+    { text: 'Contact', href: getPermalink('/contact') },
   ],
-  actions: [
-    {
-      text: 'Get Quote',
-      href: getPermalink('/contact'),
-      variant: 'primary' as const,
-    },
-  ],
+  actions: [{ text: 'Get Quote', href: getPermalink('/contact'), variant: 'primary' as const }],
 };
 
 export const footerData = {
@@ -84,6 +49,7 @@ export const footerData = {
     {
       title: 'Company',
       links: [
+        { text: 'The Founder', href: getPermalink('/founder') },
         { text: 'About ENCORE', href: getPermalink('/about') },
         { text: 'Our Factory', href: getPermalink('/about') },
         { text: 'Quality Control', href: getPermalink('/quality-control') },
@@ -109,22 +75,13 @@ export const footerData = {
   socialLinks: [
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/37545158/' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/EncoreCommericalLighting' },
-    {
-      ariaLabel: 'Instagram',
-      icon: 'tabler:brand-instagram',
-      href: 'https://www.instagram.com/encoreledcommerciallighting/',
-    },
-    {
-      ariaLabel: 'YouTube',
-      icon: 'tabler:brand-youtube',
-      href: 'https://www.youtube.com/@encorecommerciallighting4413',
-    },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/encoreledcommerciallighting/' },
+    { ariaLabel: 'YouTube', icon: 'tabler:brand-youtube', href: 'https://www.youtube.com/@encorecommerciallighting4413' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `
-    <strong>HK HQ:</strong> Room 1, 16/F, Empress Plaza 17-19 Chatham Road South Tsim Sha Tsui, KL.<br>
-    <strong>Factory:</strong> 2/F, Bldg 8th, Zhengzhong Industrial Park, Qiaotou Community, Fuyong, Bao'an Dist, Shenzhen.<br>
-    <strong>Tel:</strong> +852 6768 2519 &nbsp;|&nbsp; <strong>Email:</strong> <a href="mailto:sales@encore-tech.com">sales@encore-tech.com</a><br>
-    &copy; 2026 Encore International Co., Ltd. All rights reserved.
+    <strong>Factory:</strong> Shenzhen, China.<br>
+    <strong>Email:</strong> <a href="mailto:sales21@encore-tech.com">sales21@encore-tech.com</a><br>
+    &copy; 2026 ENCORE. All rights reserved.
   `,
 };
