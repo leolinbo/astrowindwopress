@@ -1,0 +1,183 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+
+const metadata = {
+  title: 'Rock Wong — Founder of ENCORE',
+  description:
+    'The story, philosophy and work of Rock Wong, founder of ENCORE, a Shenzhen lighting manufacturer focused on architectural and commercial LED lighting.',
+};
+
+const milestones = [
+  { year: '2011', title: 'The beginning', text: 'ENCORE began with a simple belief: better lighting starts with understanding how people actually use a space.' },
+  { year: '2013', title: 'Engineering first', text: 'An in-house R&D direction took shape, turning customer problems into products rather than simply moving products through a supply chain.' },
+  { year: '2014', title: 'A factory of our own', text: 'Manufacturing moved closer to the people designing the products, bringing engineering, production and quality into one conversation.' },
+  { year: 'Today', title: 'Still building', text: 'The work continues across track lighting, downlights and complete lighting systems for commercial spaces around the world.' },
+];
+
+const principles = [
+  ['01', 'Make the light right.', 'A fixture is not the point. The way a room feels, works and gets remembered is.'],
+  ['02', 'Stay close to engineering.', 'Good projects move faster when the people making the product can speak directly with the people specifying it.'],
+  ['03', 'Inspect what matters.', 'Quality is not a sentence in a brochure. It is what happens before a lamp leaves the factory.'],
+  ['04', 'Keep improving.', 'Materials, optics, thermal design and controls change. A manufacturer should change with them.'],
+];
+---
+
+<Layout metadata={metadata}>
+  <main class="bg-page text-default overflow-hidden">
+
+    <!-- Hero -->
+    <section class="relative min-h-[88vh] flex items-end">
+      <div class="absolute inset-0 bg-black">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/10"></div>
+        <div class="absolute inset-0 opacity-60 bg-[radial-gradient(circle_at_72%_30%,rgba(255,255,255,.16),transparent_28%)]"></div>
+      </div>
+
+      <div class="relative mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12 pb-16 sm:pb-24">
+        <p class="mb-6 text-xs uppercase tracking-[0.28em] text-white/55">The Founder · ENCORE</p>
+        <div class="max-w-5xl">
+          <h1 class="text-6xl leading-[.9] tracking-[-0.055em] text-white sm:text-8xl lg:text-[10rem]">
+            Rock Wong
+          </h1>
+          <div class="mt-8 flex flex-col gap-6 border-l border-white/30 pl-5 sm:pl-7 lg:flex-row lg:items-end lg:gap-16">
+            <p class="max-w-xl text-xl leading-relaxed text-white/80 sm:text-2xl">
+              Building lighting from the factory floor, one real project at a time.
+            </p>
+            <p class="max-w-sm text-sm leading-6 text-white/50">
+              Founder of ENCORE<br />
+              Shenzhen · Since 2011
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-32 lg:px-12">
+      <div class="grid gap-16 lg:grid-cols-[1fr_1.55fr] lg:gap-24">
+        <div>
+          <p class="text-xs uppercase tracking-[0.25em] text-muted">A founder's view</p>
+          <div class="mt-8 h-px w-20 bg-default/20"></div>
+        </div>
+        <div>
+          <p class="text-3xl leading-tight tracking-[-0.03em] sm:text-5xl">
+            “I did not want ENCORE to become another company that simply sells lights.”
+          </p>
+          <p class="mt-10 max-w-2xl text-lg leading-8 text-muted">
+            The idea was always more practical: stay close to the product, stay close to the engineers,
+            and make it easier for designers, contractors and lighting professionals to get the right
+            fixture for the space.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portrait / visual statement -->
+    <section class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+      <div class="grid min-h-[620px] overflow-hidden bg-neutral-950 lg:grid-cols-[1.15fr_.85fr]">
+        <div class="relative min-h-[520px] bg-[radial-gradient(circle_at_50%_35%,rgba(255,255,255,.16),transparent_30%),linear-gradient(135deg,#1b1b1b,#050505)]">
+          <div class="absolute bottom-8 left-8 text-[10px] uppercase tracking-[0.25em] text-white/35">Founder portrait / visual archive</div>
+          <div class="absolute right-8 top-8 text-[10px] uppercase tracking-[0.25em] text-white/35">ENCORE · Shenzhen</div>
+        </div>
+        <div class="flex items-end p-8 sm:p-12 lg:p-16">
+          <div>
+            <p class="text-xs uppercase tracking-[0.25em] text-white/40">Not a title. A responsibility.</p>
+            <p class="mt-6 text-3xl leading-tight tracking-[-0.03em] text-white sm:text-4xl">
+              Build products people can specify with confidence.
+            </p>
+            <p class="mt-8 max-w-md text-sm leading-7 text-white/55">
+              This page is designed as an editorial portrait of the founder. The final version will use
+              authentic photography from ENCORE's factory, showroom, projects and founder archive.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-32 lg:px-12">
+      <div class="grid gap-16 lg:grid-cols-[.75fr_1.75fr]">
+        <div>
+          <p class="text-xs uppercase tracking-[0.25em] text-muted">The road</p>
+          <h2 class="mt-6 text-4xl tracking-[-0.04em] sm:text-5xl">Built over time.</h2>
+        </div>
+        <div class="border-t border-default/10">
+          {milestones.map((item) => (
+            <div class="grid gap-5 border-b border-default/10 py-8 sm:grid-cols-[90px_1fr] sm:gap-10">
+              <p class="text-sm font-medium text-muted">{item.year}</p>
+              <div>
+                <h3 class="text-2xl tracking-[-0.02em]">{item.title}</h3>
+                <p class="mt-3 max-w-xl leading-7 text-muted">{item.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section class="bg-neutral-950 text-white">
+      <div class="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-32 lg:px-12">
+        <div class="max-w-3xl">
+          <p class="text-xs uppercase tracking-[0.25em] text-white/40">Working principles</p>
+          <h2 class="mt-6 text-5xl tracking-[-0.045em] sm:text-7xl">Simple rules.<br />Serious work.</h2>
+        </div>
+
+        <div class="mt-20 grid border-t border-white/10 md:grid-cols-2">
+          {principles.map(([number, title, text]) => (
+            <article class="border-b border-white/10 py-10 md:nth-[odd]:border-r md:nth-[odd]:pr-12 md:nth-[even]:pl-12">
+              <p class="text-xs tracking-[0.2em] text-white/35">{number}</p>
+              <h3 class="mt-7 text-2xl tracking-[-0.02em]">{title}</h3>
+              <p class="mt-4 max-w-md leading-7 text-white/50">{text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- What he built -->
+    <section class="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-32 lg:px-12">
+      <div class="grid gap-16 lg:grid-cols-[1fr_1fr] lg:items-center">
+        <div>
+          <p class="text-xs uppercase tracking-[0.25em] text-muted">The work</p>
+          <h2 class="mt-6 text-5xl leading-[.95] tracking-[-0.045em] sm:text-7xl">
+            From one fixture<br />to a lighting system.
+          </h2>
+        </div>
+        <div class="space-y-10">
+          <div class="border-t border-default/10 pt-6">
+            <p class="text-sm text-muted">01 / Track lighting</p>
+            <p class="mt-3 text-xl">Precision, flexibility and visual comfort for retail, galleries and hospitality.</p>
+          </div>
+          <div class="border-t border-default/10 pt-6">
+            <p class="text-sm text-muted">02 / Downlights</p>
+            <p class="mt-3 text-xl">A broader family of architectural tools, from compact display lighting to high-ceiling applications.</p>
+          </div>
+          <div class="border-t border-default/10 pt-6">
+            <p class="text-sm text-muted">03 / Project support</p>
+            <p class="mt-3 text-xl">Direct communication with engineering and a factory built around real project requirements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing statement -->
+    <section class="border-t border-default/10">
+      <div class="mx-auto max-w-7xl px-5 py-24 sm:px-8 sm:py-32 lg:px-12">
+        <div class="flex flex-col gap-12 lg:flex-row lg:items-end lg:justify-between">
+          <div class="max-w-4xl">
+            <p class="text-xs uppercase tracking-[0.25em] text-muted">The next chapter</p>
+            <h2 class="mt-7 text-5xl leading-[.95] tracking-[-0.05em] sm:text-7xl lg:text-8xl">
+              Keep making the light better.
+            </h2>
+          </div>
+          <a href="/contact" class="group inline-flex shrink-0 items-center gap-3 border-b border-default pb-2 text-sm font-medium">
+            Start a conversation
+            <Icon name="tabler:arrow-up-right" class="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Layout>
