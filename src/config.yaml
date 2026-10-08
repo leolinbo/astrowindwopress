@@ -1,22 +1,21 @@
 site:
-  name: ENCORE
+  name: 'ENCORE — The Founder'
   site: 'https://astrowindwopress.vercel.app'
   base: '/'
   trailingSlash: false
 
   googleSiteVerificationId: 'XMEpt-BTyBz3dKUcAUMdxQt6nLhtpf2WYwokot6OtuA'
 
-# Default SEO metadata
 metadata:
   title:
-    default: ENCORE — Professional LED Track Lighting & Downlight Manufacturer
+    default: 'Rock Wong — Founder of ENCORE'
     template: '%s — ENCORE'
-  description: 'Professional LED track lighting and downlight manufacturer offering OEM/ODM services. ETL/CE/ISO certified factory since 2011.'
+  description: 'The story, philosophy and work of Rock Wong, founder of ENCORE, a Shenzhen lighting manufacturer.'
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: ENCORE
+    site_name: 'ENCORE'
     images:
       - url: '~/assets/images/logo.png'
         width: 4124
@@ -64,4 +63,4 @@ analytics:
       id: null
 
 ui:
-  theme: 'system'
+  theme: 'light:only'
